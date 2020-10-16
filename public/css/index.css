@@ -1,0 +1,41 @@
+/* 
+녹색: #339059
+진한녹색: #277045
+빨간블릿: #da0f0a
+wrapper 1144px
+*/
+
+/**************** 공통사항 ******************/
+html, body {font-size: 16px;}
+.wrapper {width: 1100px; margin: 0 auto;}
+
+
+
+
+
+/**************** .header-wrapper ******************/
+.header-wrapper {}
+.top-wrapper {background-color: #339059; color: #f8f8f8; font-size: 0.75em; padding: 1em;}
+.top-wrapper > .wrapper {display:flex; justify-content: space-between; align-items: center;}
+.top-wrapper .link-wrap a {padding: 0.25em 1em; border-right: 1px solid rgba(255, 255, 255, 0.3);}
+.top-wrapper .link-wrap a:last-child {border-right: none;}
+
+
+
+
+/**************** 반응형 ******************/
+/**************** 반응형 ******************/
+@media screen and (max-width: 1199px) {
+	.wrapper {width: 900px;}
+}
+@media screen and (max-width: 991px) {
+	.wrapper {width: 700px;}
+	.top-wrapper > .wrapper {justify-content: center;}
+	.top-wrapper .link-wrap {display: none;}
+}
+@media screen and (max-width: 767px) {
+	.wrapper {width: 500px;}
+}
+@media screen and (max-width: 575px) {
+	.wrapper {width: 98%;}
+}
