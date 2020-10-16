@@ -3,18 +3,26 @@
 진한녹색: #277045
 빨간블릿: #da0f0a
 wrapper 1144px
+
+font-family: 'Rubik', sans-serif;
 */
 
 /**************** 공통사항 ******************/
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap');
+
 html, body {font-size: 16px;}
 .wrapper {width: 1100px; margin: 0 auto;}
+
+.badge-wrap {position: relative;}
+.badge {display: flex; justify-content: center; align-items: center; position: absolute; top: -8px; right: -8px;}
+.badge.count {width: 16px; height: 16px; background-color: #277045; color: #f8f8f8; border-radius: 50%; font-size: 0.75em; font-weight: 300;}
 
 
 
 
 
 /**************** .header-wrapper ******************/
-.header-wrapper {}
+.header-wrapper {font-family: 'Rubik', sans-serif;}
 .top-wrapper {background-color: #339059; color: #f8f8f8; font-size: 0.75em; padding: 1em;}
 .top-wrapper > .wrapper {display:flex; justify-content: space-between; align-items: center;}
 .top-wrapper .link-wrap a {padding: 0.25em 1em; border-right: 1px solid rgba(255, 255, 255, 0.3);}
@@ -22,8 +30,20 @@ html, body {font-size: 16px;}
 
 .title-wrapper {display: flex; justify-content: space-between; align-items: center; padding: 2em 0;}
 .title-wrapper > .logo-wrap {flex: 200px 0 0;}
+.title-wrapper > .navi-wrap {display: flex;}
+.title-wrapper > .cart-wrap {flex: 200px 0 0; display: flex;}
 
+.title-wrapper > .navi-wrap > .navi {position: relative; padding: 0.75em;}
+.title-wrapper > .navi-wrap > .navi > .sub-wrap {position: absolute; display: none;}
 
+.title-wrapper > .navi-wrap > .navi > .title {font-size: 0.875em; font-weight: 400; color: #333;}
+.title-wrapper > .navi-wrap .fa-angle-down {font-size: 0.75em; color: #aaa;}
+
+.title-wrapper > .cart-wrap i {font-size: 1.125em; color: #333;}
+.title-wrapper > .cart-wrap > div {margin: 0 1em;}
+.title-wrapper > .cart-wrap > .cart > i {margin-right: 5px;}
+.title-wrapper > .cart-wrap > .cart > span {font-size: 0.75em;}
+.title-wrapper > .cart-wrap > .cart > span.cart-price {font-weight: 500;}
 
 
 /**************** 반응형 ******************/
