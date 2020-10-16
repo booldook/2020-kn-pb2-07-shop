@@ -15,7 +15,7 @@ html, body {font-size: 16px;}
 
 .badge-wrap {position: relative;}
 .badge {display: flex; justify-content: center; align-items: center; position: absolute; top: -8px; right: -8px;}
-.badge.count {width: 16px; height: 16px; background-color: #277045; color: #f8f8f8; border-radius: 50%; font-size: 0.75em; font-weight: 300;}
+.badge.count {width: 16px; height: 16px; background-color: #277045; color: #f8f8f8; border-radius: 50%; font-size: 0.5em; font-weight: 300;}
 
 
 
@@ -28,13 +28,18 @@ html, body {font-size: 16px;}
 .top-wrapper .link-wrap a {padding: 0.25em 1em; border-right: 1px solid rgba(255, 255, 255, 0.3);}
 .top-wrapper .link-wrap a:last-child {border-right: none;}
 
-.title-wrapper {display: flex; justify-content: space-between; align-items: center; padding: 2em 0;}
+.title-wrapper {display: flex; justify-content: space-between; align-items: center; position: relative;}
 .title-wrapper > .logo-wrap {flex: 200px 0 0;}
 .title-wrapper > .navi-wrap {display: flex;}
 .title-wrapper > .cart-wrap {flex: 200px 0 0; display: flex;}
 
-.title-wrapper > .navi-wrap > .navi {position: relative; padding: 0.75em;}
-.title-wrapper > .navi-wrap > .navi > .sub-wrap {position: absolute; display: none;}
+.title-wrapper > .navi-wrap > .navi {position: relative; padding: 2rem 0.75em;}
+.title-wrapper > .navi-wrap > .navi > .sub-wrap {position: absolute; top: 80px; left: 0; background-color: #fff; height: 400px; box-shadow: 0 0 6px rgba(0,0,0,0.4); display: none;}
+.title-wrapper > .navi-wrap > .navi:nth-child(1) > .sub-wrap {width: 500px;}
+.title-wrapper > .navi-wrap > .navi:nth-child(2) > .sub-wrap {width: 100%;}
+.title-wrapper > .navi-wrap > .navi:nth-child(3) > .sub-wrap {width: 150px;}
+.title-wrapper > .navi-wrap > .navi:nth-child(4) > .sub-wrap {width: 300px;}
+.title-wrapper > .navi-wrap > .navi:nth-child(5) > .sub-wrap {width: 200px;}
 
 .title-wrapper > .navi-wrap > .navi > .title {font-size: 0.875em; font-weight: 400; color: #333;}
 .title-wrapper > .navi-wrap .fa-angle-down {font-size: 0.75em; color: #aaa;}
