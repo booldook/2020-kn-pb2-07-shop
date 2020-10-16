@@ -20,7 +20,7 @@ html, body {font-size: 16px;}
 .top-wrapper .link-wrap a {padding: 0.25em 1em; border-right: 1px solid rgba(255, 255, 255, 0.3);}
 .top-wrapper .link-wrap a:last-child {border-right: none;}
 
-.title-wrapper {display: flex; padding: 2em 0;}
+.title-wrapper {display: flex; justify-content: space-between; align-items: center; padding: 2em 0;}
 .title-wrapper > .logo-wrap {flex: 200px 0 0;}
 
 
