@@ -20,14 +20,37 @@ function onNaviLoad(r) {
 		} 
 		html += '</div>';
 		html += '<div class="sub-wrap">';
-		for(var j in r.navs[i].subs) {
-			html += '<div class="sub">';
-			html += '<div class="title">'+r.navs[i].subs[j].title+'</div>';
-			html += '<div class="cont-img"><img src="'+r.navs[i].subs[j].src+'" class="w-100"></div>';
-			html += '</div>';
+		if(i == 0) {
+			for(var j in r.navs[i].subs) {
+				html += '<div class="sub">';
+				html += '<div class="title">'+r.navs[i].subs[j].title+'</div>';
+				html += '<div class="cont-img"><img src="'+r.navs[i].subs[j].src+'" class="w-100"></div>';
+				html += '</div>';
+			}
+		}
+		else if(i == 1) {
+			html += '<div class="wrapper">';
+			html += '	<div class="lt">';
+			html += '		<div class="subs">';
+			for(var j in r.navs[i].subs) {
+				html += '			<div class="sub">';
+				html += '				<div class="title">'+r.navs[i].subs[j].title+'</div>';
+				for(var k in r.navs[i].subs[j].subs) {
+					html += '			<div class="name">'+r.navs[i].subs[j].subs[k].title+'</div>';
+				}
+				html += '			</div>';
+			}
+			html += '		</div>';
+			html += '		<div class="infos">';
+			html += '		</div>';
+			html += '	</div>';
+			html += '	<div class="rt">';
+			html += '	</div>';
+			html += '<div>';
 		}
 		html += '</div>';	// .sub-wrap
 		html += '</div>'; // .navi
+		console.log(html);
 		$(".navi-wrap").append(html);
 	}
 	$(".navi-wrap > .navi").mouseenter(onEnter);

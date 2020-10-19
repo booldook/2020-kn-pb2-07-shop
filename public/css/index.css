@@ -27,13 +27,13 @@ html, body {font-size: 16px;}
 
 
 /**************** .header-wrapper ******************/
-.header-wrapper {font-family: 'Rubik', sans-serif;}
+.header-wrapper {font-family: 'Rubik', sans-serif; position: relative;}
 .top-wrapper {background-color: #339059; color: #f8f8f8; font-size: 0.75em; padding: 1em;}
 .top-wrapper > .wrapper {display:flex; justify-content: space-between; align-items: center;}
 .top-wrapper .link-wrap a {padding: 0.25em 1em; border-right: 1px solid rgba(255, 255, 255, 0.3);}
 .top-wrapper .link-wrap a:last-child {border-right: none;}
 
-.title-wrapper {display: flex; justify-content: space-between; align-items: center; position: relative;}
+.title-wrapper {display: flex; justify-content: space-between; align-items: center;}
 .title-wrapper > .logo-wrap {flex: 200px 0 0;}
 .title-wrapper > .navi-wrap {display: flex;}
 .title-wrapper > .cart-wrap {flex: 200px 0 0; display: flex;}
@@ -48,6 +48,14 @@ html, body {font-size: 16px;}
 .title-wrapper .navi0 .sub {flex: 18% 0 0; margin: 1%;}
 .title-wrapper .navi0 .sub .title {text-align: center; font-weight: bold; color: #333;}
 .title-wrapper .navi0 .sub .title > span {color: #339059;}
+
+.title-wrapper .navi1 .sub-wrap {width: 100%; top: 122px !important;}
+.title-wrapper .navi1 .sub-wrap > .wrapper {display: flex;}
+.title-wrapper .navi1 .sub-wrap > .wrapper > .lt {flex: 75% 0 0;}
+.title-wrapper .navi1 .sub-wrap > .wrapper > .lt > .subs {display: flex;}
+.title-wrapper .navi1 .sub-wrap > .wrapper > .lt > .subs > .sub {flex: 23% 0 0; margin: 0 1%;}
+.title-wrapper .navi1 .sub-wrap > .wrapper > .rt {flex: 25% 0 0;}
+
 
 
 .title-wrapper > .cart-wrap i {font-size: 1.125em; color: #333;}
