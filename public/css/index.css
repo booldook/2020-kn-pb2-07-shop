@@ -34,15 +34,16 @@ html, body {font-size: 16px;}
 .title-wrapper > .cart-wrap {flex: 200px 0 0; display: flex;}
 
 .title-wrapper > .navi-wrap > .navi {position: relative; padding: 2rem 0.75em;}
-.title-wrapper > .navi-wrap > .navi > .sub-wrap {position: absolute; top: 80px; left: 0; background-color: #fff; height: 400px; box-shadow: 0 0 6px rgba(0,0,0,0.4); display: none;}
-.title-wrapper > .navi-wrap > .navi:nth-child(1) > .sub-wrap {width: 500px;}
-.title-wrapper > .navi-wrap > .navi:nth-child(2) > .sub-wrap {width: 100%;}
-.title-wrapper > .navi-wrap > .navi:nth-child(3) > .sub-wrap {width: 150px;}
-.title-wrapper > .navi-wrap > .navi:nth-child(4) > .sub-wrap {width: 300px;}
-.title-wrapper > .navi-wrap > .navi:nth-child(5) > .sub-wrap {width: 200px;}
+.title-wrapper > .navi-wrap > .navi > .sub-wrap {position: absolute; top: 80px; left: 0; background-color: #fff; min-height: 400px; box-shadow: 0 0 6px rgba(0,0,0,0.4); display: none;}
 
 .title-wrapper > .navi-wrap > .navi > .title {font-size: 0.875em; font-weight: 400; color: #333;}
 .title-wrapper > .navi-wrap .fa-angle-down {font-size: 0.75em; color: #aaa;}
+
+.title-wrapper .navi0 .sub-wrap {display: flex; flex-wrap: wrap; width: 800px;}
+.title-wrapper .navi0 .sub {flex: 18% 0 0; margin: 1%;}
+.title-wrapper .navi0 .sub .title {text-align: center; font-weight: bold; color: #333;}
+.title-wrapper .navi0 .sub .title > span {color: #339059;}
+
 
 .title-wrapper > .cart-wrap i {font-size: 1.125em; color: #333;}
 .title-wrapper > .cart-wrap > div {margin: 0 1em;}

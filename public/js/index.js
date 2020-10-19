@@ -1,8 +1,8 @@
 function onEnter() {
-	$(this).find(".sub-wrap").show();
+	$(this).find(".sub-wrap").css("display", "flex");
 }
 function onLeave() {
-	$(this).find(".sub-wrap").hide();
+	$(this).find(".sub-wrap").css("display", "none");
 }
 
 /** Main Navi 생성 **********************/
@@ -16,12 +16,12 @@ function onNaviLoad(r) {
 		html += '<div class="sub-wrap">';
 		for(var j in r.navs[i].subs) {
 			html += '<div class="sub">';
-			html += '<div class="title">1. HOME DEFAULT</div>';
-			html += '<div class="cont-img"><img src="../img/default.jpg" alt="그림" class="w-100"></div>';
+			html += '<div class="title">'+r.navs[i].subs[j].title+'</div>';
+			html += '<div class="cont-img"><img src="'+r.navs[i].subs[j].src+'" class="w-100"></div>';
 			html += '</div>';
 		}
-		html += '</div>';
-		html += '</div>';
+		html += '</div>';	// .sub-wrap
+		html += '</div>'; // .navi
 		$(".navi-wrap").append(html);
 	}
 	$(".navi-wrap > .navi").mouseenter(onEnter);
