@@ -1,0 +1,69 @@
+{
+	"navs": [
+		{"title": "HOME", "link": "#", "subs": [
+			{"title": "1. Bakery", "src": "../img/bakery.jpg", "link": "#"},
+			{"title": "2. Bicycle", "src": "../img/bicycle.jpg", "link": "#"},
+			{"title": "3. Car", "src": "../img/coffee.jpg", "link": "#"},
+			{"title": "4. coffee", "src": "../img/bakery.jpg", "link": "#"},
+			{"title": "5. Cosmetics", "src": "../img/cosmetics.jpg", "link": "#"},
+			{"title": "6. Electronics", "src": "../img/electronics.jpg", "link": "#"},
+			{"title": "7. Fashion", "src": "../img/fashion_2.jpg", "link": "#"},
+			{"title": "8. Furniture", "src": "../img/furniture.jpg", "link": "#"},
+			{"title": "9. Game", "src": "../img/game.jpg", "link": "#"},
+			{"title": "10. Lighting", "src": "../img/lighting.jpg", "link": "#"}
+		]},
+		{
+			"title": "SHOP", "link": "#", "subs": [
+				{"title": "SHOP STYLES", "link": "#", "subs": [
+					{"title": "Quick shop productHOT", "link": "#", "icon": "HOT"},
+					{"title": "Masonry Grid", "link": "#", "icon": ""},
+					{"title": "Default style", "link": "#", "icon": ""},
+					{"title": "Alternative ShopHOT", "link": "#", "icon": "HOT"},
+					{"title": "Button on hover", "link": "#", "icon": ""},
+					{"title": "Button hover alt", "link": "#", "icon": ""},
+					{"title": "Hover info", "link": "#", "icon": ""},
+					{"title": "Standard button", "link": "#", "icon": ""},
+					{"title": "Full width", "link": "#", "icon": ""}
+				]},
+				{"title": "PRODUCT PAGES", "link": "#", "subs": [
+					{"title": "Default style", "link": "#", "icon": ""},
+					{"title": "Alternative style", "link": "#", "icon": ""},
+					{"title": "Compact", "link": "#", "icon": "NEW"},
+					{"title": "Sticky details", "link": "#", "icon": "HOT"},
+					{"title": "Variationst images", "link": "#", "icon": ""},
+					{"title": "Variations style 2", "link": "#", "icon": ""},
+					{"title": "Variant images grouped", "link": "#", "icon": ""},
+					{"title": "Powerful Layout", "link": "#", "icon": ""},
+					{"title": "With sidebar", "link": "#", "icon": ""}
+				]},
+				{"title": "PRODUCT FEATURES", "link": "#", "subs": [
+					{"title": "360° product viewer", "link": "#", "icon": ""},
+					{"title": "Zoom image", "link": "#", "icon": ""},
+					{"title": "With video", "link": "#", "icon": "NEW"},
+					{"title": "Large Image", "link": "#", "icon": ""},
+					{"title": "Small Image", "link": "#", "icon": ""},
+					{"title": "Variable Product", "link": "#", "icon": ""},
+					{"title": "Grouped Product", "link": "#", "icon": ""},
+					{"title": "External Product", "link": "#", "icon": ""},
+					{"title": "Sidebar right", "link": "#", "icon": ""},
+					{"title": "Product Instagram Tags", "link": "#", "icon": ""}
+				]},
+				{"title": "SHOP PAGES", "link": "#", "subs": [
+					{"title": "2 Columns", "link": "#", "icon": ""},
+					{"title": "3 Columns", "link": "#", "icon": ""},
+					{"title": "4 Columns", "link": "#", "icon": ""},
+					{"title": "6 Columns", "link": "#", "icon": ""},
+					{"title": "Sidebar Left", "link": "#", "icon": ""},
+					{"title": "Sidebar Right", "link": "#", "icon": ""},
+					{"title": "No sidebar", "link": "#", "icon": ""},
+					{"title": "Category banner", "link": "#", "icon": ""},
+					{"title": "RTL Shop page", "link": "#", "icon": "NEW"}
+				]}
+			]
+		},
+		{"title": "BLOG", "link": "#", "subs": []},
+		{"title": "PAGES", "link": "#", "subs": []},
+		{"title": "FEATURES", "link": "#", "subs": []}
+	]
+}
+
