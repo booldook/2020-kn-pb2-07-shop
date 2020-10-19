@@ -12,7 +12,13 @@ function onNaviLoad(r) {
 	var html = '';
 	for(var i in r.navs) {
 		html  = '<div class="navi '+r.navs[i].class+'">';
-		html += '<span class="title">'+r.navs[i].title+' <i class="fa fa-angle-down"></i></span>';
+		html += '<div class="title">'+r.navs[i].title+' <i class="fa fa-angle-down"></i>';
+		if(r.navs[i].icon != '') {
+			html += '<div class="icon red">'+r.navs[i].icon;
+			html += '<i class="fas fa-caret-right"></i>';
+			html += '</div>';
+		} 
+		html += '</div>';
 		html += '<div class="sub-wrap">';
 		for(var j in r.navs[i].subs) {
 			html += '<div class="sub">';

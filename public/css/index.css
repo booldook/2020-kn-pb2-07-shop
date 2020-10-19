@@ -17,6 +17,11 @@ html, body {font-size: 16px;}
 .badge {display: flex; justify-content: center; align-items: center; position: absolute; top: -8px; right: -8px;}
 .badge.count {width: 16px; height: 16px; background-color: #277045; color: #f8f8f8; border-radius: 50%; font-size: 0.5em; font-weight: 300;}
 
+.icon {position: absolute; color: #fff; top: -16px; right: 0; font-size: 10px; padding: 0 3px;}
+.icon .fas {position: absolute; bottom: -7px; left: 6px; font-size: 14px;}
+.icon.red {background-color: #d41212;}
+.icon.red .fas {color: #d41212;}
+
 
 
 
@@ -36,7 +41,7 @@ html, body {font-size: 16px;}
 .title-wrapper > .navi-wrap > .navi {position: relative; padding: 2rem 0.75em;}
 .title-wrapper > .navi-wrap > .navi > .sub-wrap {position: absolute; top: 80px; left: 0; background-color: #fff; min-height: 400px; box-shadow: 0 0 6px rgba(0,0,0,0.4); display: none;}
 
-.title-wrapper > .navi-wrap > .navi > .title {font-size: 0.875em; font-weight: 400; color: #333;}
+.title-wrapper > .navi-wrap > .navi > .title {font-size: 0.875em; font-weight: 400; color: #333; position: relative;}
 .title-wrapper > .navi-wrap .fa-angle-down {font-size: 0.75em; color: #aaa;}
 
 .title-wrapper .navi0 .sub-wrap {display: flex; flex-wrap: wrap; width: 800px;}
