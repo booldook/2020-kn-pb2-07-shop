@@ -17,10 +17,14 @@ html, body {font-size: 16px;}
 .badge {display: flex; justify-content: center; align-items: center; position: absolute; top: -8px; right: -8px;}
 .badge.count {width: 16px; height: 16px; background-color: #277045; color: #f8f8f8; border-radius: 50%; font-size: 0.5em; font-weight: 300;}
 
-.icon {position: absolute; color: #fff; top: -16px; right: 0; font-size: 10px; padding: 0 3px;}
+.icon {position: absolute; color: #fff; font-size: 10px; padding: 0 3px;}
 .icon .fas {position: absolute; bottom: -7px; left: 6px; font-size: 14px;}
-.icon.red {background-color: #d41212;}
+.icon.red {background-color: #d41212; top: -16px; right: 0;}
 .icon.red .fas {color: #d41212;}
+.icon.green {background-color: #339059; top: -4px; right: -24px;}
+.icon.green .fas {color: #339059;}
+.icon.yellow {background-color: #f0bd14; top: -4px; right: -24px;}
+.icon.yellow .fas {color: #f0bd14;}
 
 
 
@@ -53,7 +57,7 @@ html, body {font-size: 16px;}
 .title-wrapper .navi1 .sub-wrap > .wrapper {display: flex; padding: 2em 0;}
 .title-wrapper .navi1 .sub-wrap > .wrapper > .lt {flex: 75% 0 0;}
 .title-wrapper .navi1 .sub-wrap > .wrapper > .lt > .subs {display: flex;}
-.title-wrapper .navi1 .sub-wrap > .wrapper > .lt > .subs > .sub {flex: 23% 0 0; margin: 0 1%;}
+.title-wrapper .navi1 .sub-wrap > .wrapper > .lt > .subs > .sub {flex: 23% 0 0; margin: 0 1%; display: flex; flex-direction: column; align-items: flex-start;}
 .title-wrapper .navi1 .sub-wrap > .wrapper > .lt > .subs > .sub > .title {font-weight: bold; color: #666; padding-bottom: 1em;}
 .title-wrapper .navi1 .sub-wrap > .wrapper > .lt > .subs > .sub > .name {color: #aaa; font-size: 0.875em; padding: 0.375em 0;}
 .title-wrapper .navi1 .sub-wrap > .wrapper > .rt {flex: 25% 0 0;}
