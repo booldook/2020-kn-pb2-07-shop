@@ -58,6 +58,11 @@
 					{"title": "Category banner", "link": "#", "icon": ""},
 					{"title": "RTL Shop page", "link": "#", "icon": "NEW", "color": "green"}
 				]}
+			], "infos": [
+				{"title": "FREE SHIPPING", "link": "#", "content": "Free for $50+ orders", "icon": "fa fa-rocket"},
+				{"title": "BUYER SUPPORT", "link": "#", "content": "Get in touch 24/7", "icon": "fa fa-phone"},
+				{"title": "TOTAL SECURITY", "link": "#", "content": "Secure checkout", "icon": "fa fa-th"},
+				{"title": "RETURN POLICY", "link": "#", "content": "14 days ago", "icon": "fa fa-reply"}
 			]
 		},
 		{"title": "BLOG", "link": "#", "class":"navi2", "icon": "", "subs": []},
@@ -65,4 +70,14 @@
 		{"title": "FEATURES", "link": "#", "class":"navi4", "icon": "", "subs": []}
 	]
 }
+
+
+
+
+
+
+
+
+
+
 
