@@ -75,9 +75,10 @@ html, body {font-size: 16px;}
 .sub-slide .wrap {position: relative; display: flex; width: 400%;}
 .sub-slide .slide {position: relative; flex: 25% 0 0;}
 .sub-slide .img-wrap {position: relative; overflow: hidden; border: 1px solid blue; user-select: none; cursor: pointer;}
-.sub-slide .img-case:not(:first-child) {display: none;}
-.sub-slide .img-case img {position: absolute; z-index: 1;}
-.sub-slide .img-case img:first-child {position: absolute; z-index: 2;}
+.sub-slide .img-case {position: relative; display: none;}
+.sub-slide .img-case.active {display: block;}
+.sub-slide .img-case img:last-child {position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 0.5s;}
+.sub-slide .img-wrap:hover img:last-child {opacity: 1;}
 
 .sub-slide .bt {position: absolute; z-index:99; transition: all 0.5s;}
 
@@ -92,8 +93,7 @@ html, body {font-size: 16px;}
 .sub-slide .bt-heart {right: 8px; top: 8px;}
 .sub-slide .bt-sync {right: 8px; top: 48px;}
 .sub-slide .bt-search {right: 8px; top: 88px;}
-.sub-slide .bt > .popper {background-color: #111; color: #f8f8f8; margin-right: 1em; font-size: 0.625em; transform: translateX(-20px); opacity: 0; transition: transform 0.5s, opacity 0.5s; 
-	overflow: hidden; width: 0; padding: 0;}
+.sub-slide .bt > .popper {background-color: #111; color: #f8f8f8; margin-right: 1em; font-size: 0.625em; transform: translateX(-20px); opacity: 0; transition: transform 0.5s, opacity 0.5s; overflow: hidden; width: 0; padding: 0;}
 .sub-slide .bt > .popper > i {color: #111; transform: translateX(6px); font-size: 1.5em;}
 
 .title-wrapper > .cart-wrap i {font-size: 1.125em; color: #333;}
