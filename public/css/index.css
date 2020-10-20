@@ -71,14 +71,14 @@ html, body {font-size: 16px;}
 .title-wrapper .navi1 .rt {flex: 25% 0 0;}
 
 .sub-slide {width: 300px; margin: auto;}
-.sub-slide .stage {position: relative; border: 1px solid red; overflow: hidden;}
+.sub-slide .stage {position: relative; border: 1px solid red; /* overflow: hidden; */}
 .sub-slide .wrap {position: relative; display: flex; width: 400%;}
 .sub-slide .slide {position: relative; flex: 25% 0 0; text-align: center;}
-.sub-slide .img-wrap {position: relative; overflow: hidden; border: 1px solid blue; user-select: none; cursor: pointer;}
+.sub-slide .img-wrap {position: relative; /* overflow: hidden; */ border: 1px solid blue; user-select: none; cursor: pointer;}
 .sub-slide .img-case {position: relative; display: none;}
 .sub-slide .img-case.active {display: block;}
-.sub-slide .img-case img:last-child {position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 0.5s;}
-.sub-slide .stage:hover img:last-child {opacity: 1;}
+.sub-slide .img-case img:nth-child(2) {position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 0.5s;}
+.sub-slide .stage:hover img:nth-child(2) {opacity: 1;}
 
 .sub-slide .bt {position: absolute; z-index:99; transition: all 0.5s;}
 
@@ -99,15 +99,23 @@ html, body {font-size: 16px;}
 .sub-slide .color {}
 .sub-slide .color span {cursor: pointer; font-size: 2em; line-height: 1em; display: inline-block;}
 .sub-slide .color span.blue {color: #3ab6f0;}
+.sub-slide .color span.red {color: #dd3333;}
 .sub-slide .color span.black {color: #111;}
 .sub-slide .color span.yellow {color: #f1f12c;}
 .sub-slide .color span.active {border-bottom: 3px solid #111;}
 
-.sub-slide .slide > .title {color: #777; font-family: 'serif';}
-.sub-slide .slide > .brand {color: #777;}
-.sub-slide .slide > .price {color: #444;}
-.sub-slide .slide > .title:hover {color: #444;}
-.sub-slide .slide > .brand:hover {color: #444; text-decoration: underline;}
+.sub-slide .slide > .title {color: #777; user-select: none;}
+.sub-slide .slide > .brand {color: #777; user-select: none;}
+.sub-slide .slide > .price {color: #222; user-select: none;}
+.sub-slide .slide > .price > .price-def {color: #999; text-decoration: line-through;}
+.sub-slide .slide > .price > .price-sale {color: #189954;}
+.sub-slide .slide > .title:hover {color: #333;}
+.sub-slide .slide > .brand:hover {color: #333; text-decoration: underline;}
+
+.sub-slide .bt-pager {color: #777; font-size: 2.5em; position: absolute; top: calc(50% - 1.25em); z-index: 99; user-select: none; cursor: pointer; transition: all 0.5s;}
+.sub-slide .bt-pager:hover {color: #222;}
+.sub-slide .bt-prev {left: 0;}
+.sub-slide .bt-next {right: 0;}
 
 .title-wrapper > .cart-wrap i {font-size: 1.125em; color: #333;}
 .title-wrapper > .cart-wrap > div {margin: 0 1em;}

@@ -11,6 +11,29 @@ function onColorClick() {
 	$imgCase.eq($(this).index()).stop().delay(100).fadeIn(100);
 }
 
+var subNow = 0;
+var subLast = 3;
+function onSubPrevClick() {
+	if(subNow == 0) {
+		subNow = subLast - 1;
+		$(".sub-slide .wrap").css("left", -subLast * 100 +"%");
+	}
+	else subNow--;
+	subAni();
+}
+function onSubNextClick() {
+	if(subNow < subLast) subNow++;
+	subAni();
+}
+function subAni() {
+	$(".sub-slide .wrap").stop().animate({"left": -100 * subNow +"%"}, 500, function(){
+		if(subNow == subLast) {
+			subNow = 0;
+			$(".sub-slide .wrap").css("left", 0);
+		}
+	});
+}
+
 /** Main Navi 생성 **********************/
 $.get('../json/navi.json', onNaviLoad);
 function onNaviLoad(r) {
@@ -77,6 +100,8 @@ function onNaviLoad(r) {
 	$(".navi-wrap > .navi").mouseenter(onEnter);
 	$(".navi-wrap > .navi").mouseleave(onLeave);
 	$(".sub-slide .color").find("span").click(onColorClick);
+	$(".sub-slide .bt-prev").click(onSubPrevClick);
+	$(".sub-slide .bt-next").click(onSubNextClick);
 }
 /*
 <div class="navi">
