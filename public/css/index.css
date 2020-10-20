@@ -55,17 +55,20 @@ html, body {font-size: 16px;}
 
 .title-wrapper .navi1 .sub-wrap {width: 100%; top: 122px !important;}
 .title-wrapper .navi1 .sub-wrap > .wrapper {display: flex; padding: 2em 0;}
-.title-wrapper .navi1 .sub-wrap > .wrapper > .lt {flex: 75% 0 0; border-right: 1px solid #ccc;}
-.title-wrapper .navi1 .sub-wrap > .wrapper > .lt > .subs {display: flex;}
-.title-wrapper .navi1 .sub-wrap > .wrapper > .lt > .subs > .sub {flex: 23% 0 0; margin: 0 1%; display: flex; flex-direction: column; align-items: flex-start;}
-.title-wrapper .navi1 .sub-wrap > .wrapper > .lt > .subs > .sub > .title {font-weight: bold; color: #666; padding-bottom: 1em; transition: all 0.5s; cursor: pointer;}
-.title-wrapper .navi1 .sub-wrap > .wrapper > .lt > .subs > .sub > .title:hover {color: #339059;}
-.title-wrapper .navi1 .sub-wrap > .wrapper > .lt > .subs > .sub > .name {color: #aaa; font-size: 0.875em; padding: 0.375em 0; transition: all 0.5s; cursor: pointer;}
-.title-wrapper .navi1 .sub-wrap > .wrapper > .lt > .subs > .sub > .name:hover {transform: translateX(8px); color: #339059;}
-.title-wrapper .navi1 .sub-wrap > .wrapper > .lt > .infos {display: flex; margin: 1em 0;}
-.title-wrapper .navi1 .sub-wrap > .wrapper > .lt > .infos > .info {flex: 22% 0 0; margin-right: 3%;}
-.title-wrapper .navi1 .sub-wrap > .wrapper > .lt > .infos > .info:not(:last-child) {border-right: 1px solid #ccc;}
-.title-wrapper .navi1 .sub-wrap > .wrapper > .rt {flex: 25% 0 0;}
+.title-wrapper .navi1 .lt {flex: 75% 0 0; border-right: 1px solid #ccc;}
+.title-wrapper .navi1 .subs {display: flex;}
+.title-wrapper .navi1 .sub {flex: 23% 0 0; margin: 0 1%; display: flex; flex-direction: column; align-items: flex-start;}
+.title-wrapper .navi1 .sub > .title {font-weight: bold; color: #666; padding-bottom: 1em; transition: all 0.5s; cursor: pointer;}
+.title-wrapper .navi1 .sub > .title:hover {color: #339059;}
+.title-wrapper .navi1 .sub > .name {color: #aaa; font-size: 0.875em; padding: 0.375em 0; transition: all 0.5s; cursor: pointer;}
+.title-wrapper .navi1 .sub > .name:hover {transform: translateX(8px); color: #339059;}
+.title-wrapper .navi1 .infos {display: flex; margin: 1em 0;}
+.title-wrapper .navi1 .info {flex: 22% 0 0; margin-right: 3%;}
+.title-wrapper .navi1 .info:not(:last-child) {border-right: 1px solid #ccc;}
+.title-wrapper .navi1 .info i {margin-right: 4px;}
+.title-wrapper .navi1 .info > .content {color: #aaa; font-size: 0.875em;}
+
+.title-wrapper .navi1 .rt {flex: 25% 0 0;}
 
 
 
