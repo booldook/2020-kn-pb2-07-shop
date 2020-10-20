@@ -78,17 +78,17 @@ html, body {font-size: 16px;}
 .sub-slide .img-case {position: relative; display: none;}
 .sub-slide .img-case.active {display: block;}
 .sub-slide .img-case img:last-child {position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 0.5s;}
-.sub-slide .img-wrap:hover img:last-child {opacity: 1;}
+.sub-slide .stage:hover img:last-child {opacity: 1;}
 
 .sub-slide .bt {position: absolute; z-index:99; transition: all 0.5s;}
 
 .sub-slide .bt-quick {background-color: #111; color: #f8f8f8; text-align: center; 
 	font-size: 0.875em; padding: 0.75em;  bottom: 0; width: 100%; transform: translateY(50px);}
 .sub-slide .bt-quick:hover {background-color: #555;}
-.sub-slide .img-wrap:hover > .bt-quick {transform: translateY(0);}
+.sub-slide .stage:hover .bt-quick {transform: translateY(0);}
 
 .sub-slide .bt-icon {height: 32px; display: flex; align-items: center; font-size: 1.25em; color: #666; opacity: 0;}
-.sub-slide .img-wrap:hover > .bt-icon {opacity: 1;}
+.sub-slide .stage:hover .bt-icon {opacity: 1;}
 .sub-slide .bt-icon:hover > .popper {transform: translateX(0); opacity: 1; padding: 0.5em 0 0.5em 0.75em; width: auto; overflow: visible;}
 .sub-slide .bt-heart {right: 8px; top: 8px;}
 .sub-slide .bt-sync {right: 8px; top: 48px;}
