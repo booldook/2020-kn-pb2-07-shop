@@ -70,6 +70,24 @@ html, body {font-size: 16px;}
 
 .title-wrapper .navi1 .rt {flex: 25% 0 0;}
 
+.sub-slide {width: 300px; margin: auto;}
+.sub-slide .stage {position: relative; border: 1px solid red;}
+.sub-slide .wrap {position: relative; display: flex; width: 400%;}
+.sub-slide .slide {position: relative; flex: 25% 0 0;}
+.sub-slide .img-wrap {position: relative; border: 1px solid blue;}
+.sub-slide .img-case:not(:first-child) {display: none;}
+.sub-slide .img-case img {position: absolute; z-index: 1;}
+.sub-slide .img-case img:first-child {position: absolute; z-index: 2;}
+.sub-slide .bt {user-select: none; cursor: pointer; position: absolute; z-index:99;}
+.sub-slide .bt-quick {background-color: #111; color: #f8f8f8; text-align: center; 
+	font-size: 0.875em; padding: 0.75em;  bottom: 0; width: 100%;}
+.sub-slide .bt-heart {right: 8px; top: 8px; display: flex; align-items: center; font-size: 1.25em;}
+.sub-slide .bt-sync {right: 8px; top: 48px; display: flex; align-items: center; font-size: 1.25em;}
+.sub-slide .bt-search {right: 8px; top: 88px; display: flex; align-items: center; font-size: 1.25em;}
+.sub-slide .bt > .popper {background-color: #111; color: #f8f8f8; font-size: 0.625em; 
+	padding: 0.5em 0 0.5em 0.75em; margin-right: 1em;}
+.sub-slide .bt > .popper > i {color: #111; transform: translateX(6px); font-size: 1.5em;}
+
 
 
 .title-wrapper > .cart-wrap i {font-size: 1.125em; color: #333;}
