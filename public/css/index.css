@@ -71,9 +71,9 @@ html, body {font-size: 16px;}
 .title-wrapper .navi1 .rt {flex: 25% 0 0;}
 
 .sub-slide {width: 300px; margin: auto;}
-.sub-slide .stage {position: relative; border: 1px solid red;}
+.sub-slide .stage {position: relative; border: 1px solid red; overflow: hidden;}
 .sub-slide .wrap {position: relative; display: flex; width: 400%;}
-.sub-slide .slide {position: relative; flex: 25% 0 0;}
+.sub-slide .slide {position: relative; flex: 25% 0 0; text-align: center;}
 .sub-slide .img-wrap {position: relative; overflow: hidden; border: 1px solid blue; user-select: none; cursor: pointer;}
 .sub-slide .img-case {position: relative; display: none;}
 .sub-slide .img-case.active {display: block;}
@@ -82,7 +82,7 @@ html, body {font-size: 16px;}
 
 .sub-slide .bt {position: absolute; z-index:99; transition: all 0.5s;}
 
-.sub-slide .bt-quick {background-color: #111; color: #f8f8f8; text-align: center; 
+.sub-slide .bt-quick {background-color: #111; color: #f8f8f8;
 	font-size: 0.875em; padding: 0.75em;  bottom: 0; width: 100%; transform: translateY(50px);}
 .sub-slide .bt-quick:hover {background-color: #555;}
 .sub-slide .stage:hover .bt-quick {transform: translateY(0);}
@@ -95,6 +95,19 @@ html, body {font-size: 16px;}
 .sub-slide .bt-search {right: 8px; top: 88px;}
 .sub-slide .bt > .popper {background-color: #111; color: #f8f8f8; margin-right: 1em; font-size: 0.625em; transform: translateX(-20px); opacity: 0; transition: transform 0.5s, opacity 0.5s; overflow: hidden; width: 0; padding: 0;}
 .sub-slide .bt > .popper > i {color: #111; transform: translateX(6px); font-size: 1.5em;}
+
+.sub-slide .color {}
+.sub-slide .color span {cursor: pointer; font-size: 2em; line-height: 1em; display: inline-block;}
+.sub-slide .color span.blue {color: #3ab6f0;}
+.sub-slide .color span.black {color: #111;}
+.sub-slide .color span.yellow {color: #f1f12c;}
+.sub-slide .color span.active {border-bottom: 3px solid #111;}
+
+.sub-slide .slide > .title {color: #777; font-family: 'serif';}
+.sub-slide .slide > .brand {color: #777;}
+.sub-slide .slide > .price {color: #444;}
+.sub-slide .slide > .title:hover {color: #444;}
+.sub-slide .slide > .brand:hover {color: #444; text-decoration: underline;}
 
 .title-wrapper > .cart-wrap i {font-size: 1.125em; color: #333;}
 .title-wrapper > .cart-wrap > div {margin: 0 1em;}
