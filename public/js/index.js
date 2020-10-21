@@ -89,7 +89,47 @@ function onNaviLoad(r) {
 			html += '		</div>';
 			html += '	</div>';	// .lt
 			html += '	<div class="rt">';
-			html += '	</div>';
+			html += '		<div class="sub-slide">';
+			html += '			<div class="stage">';
+			html += '				<div class="wrap">';
+			html += '					<div class="slide">';
+			html += '						<div class="img-wrap">';
+			html += '							<div class="img-case active">';
+			html += '								<img src="../img/ss-01-blue-01.jpg" class="w-100">';
+			html += '								<img src="../img/ss-01-blue-02.jpg" class="w-100">';
+			html += '							</div>';
+			html += '							<div class="bt bt-icon bt-heart">';
+			html += '								<div class="popper">';
+			html += '									Login to use Wishlist <i class="fa fa-caret-right"></i>';
+			html += '								</div>';
+			html += '								<i class="far fa-heart"></i>';
+			html += '							</div>';
+			html += '							<div class="bt bt-icon bt-sync">';
+			html += '								<div class="popper">';
+			html += '									Compare <i class="fa fa-caret-right"></i>';
+			html += '								</div>';
+			html += '								<i class="fa fa-sync"></i>';
+			html += '							</div>';
+			html += '							<div class="bt bt-icon bt-search">';
+			html += '								<div class="popper">';
+			html += '									Quick View <i class="fa fa-caret-right"></i>';
+			html += '								</div>';
+			html += '								<i class="fa fa-search-plus"></i>';
+			html += '							</div>';
+			html += '						</div>';
+			html += '						<div class="color">';
+			html += '							<span class="blue">●</span>';
+			html += '						</div>';
+			html += '						<div class="title">Yus condntum sapien</div>';
+			html += '						<div class="brand">BASEL</div>';
+			html += '						<div class="price">$592.00</div>';
+			html += '					</div>';
+			html += '				</div>';
+			html += '				<div class="bt-pager bt-prev">〈</div>';
+			html += '				<div class="bt-pager bt-next">〉</div>';
+			html += '			</div>';
+			html += '		</div>';	// .sub-slide
+			html += '	</div>';	// .rt
 			html += '<div>';
 		}
 		html += '</div>';	// .sub-wrap
