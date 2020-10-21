@@ -71,10 +71,10 @@ html, body {font-size: 16px;}
 .title-wrapper .navi1 .rt {flex: 25% 0 0;}
 
 .sub-slide {width: 300px; margin: auto;}
-.sub-slide .stage {position: relative; border: 1px solid red; /* overflow: hidden; */}
+.sub-slide .stage {position: relative; overflow: hidden;}
 .sub-slide .wrap {position: relative; display: flex; width: 400%;}
 .sub-slide .slide {position: relative; flex: 25% 0 0; text-align: center;}
-.sub-slide .img-wrap {position: relative; /* overflow: hidden; */ border: 1px solid blue; user-select: none; cursor: pointer;}
+.sub-slide .img-wrap {position: relative; overflow: hidden; user-select: none; cursor: pointer;}
 .sub-slide .img-case {position: relative; display: none;}
 .sub-slide .img-case.active {display: block;}
 .sub-slide .img-case img:nth-child(2) {position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 0.5s;}
