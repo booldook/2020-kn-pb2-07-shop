@@ -82,8 +82,8 @@
 					"title": "Yus condntum sapien",
 					"brand": "BASEL",
 					"price": "$592.00",
-					"price-def": "",
-					"price-sale": ""
+					"priceDef": "",
+					"priceSale": ""
 				},
 				{
 					"cases": [
@@ -103,8 +103,8 @@
 					"title": "Yom orki lacinia",
 					"brand": "BASEL",
 					"price": "",
-					"price-def": "$799.00",
-					"price-sale": "$592.00"
+					"priceDef": "$799.00",
+					"priceSale": "$592.00"
 				},
 				{
 					"cases": [
@@ -124,8 +124,8 @@
 					"title": "Yus condntum sapien2",
 					"brand": "BASEL",
 					"price": "",
-					"price-def": "$1,299.00",
-					"price-sale": "$892.00"
+					"priceDef": "$1,299.00",
+					"priceSale": "$892.00"
 				}
 			]
 		},

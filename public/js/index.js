@@ -94,38 +94,50 @@ function onNaviLoad(r) {
 			html += '				<div class="wrap">';
 			r.navs[i].slides.push(r.navs[i].slides[0]);
 			for(var j in r.navs[i].slides) {
-				html += '					<div class="slide">';
-				html += '						<div class="img-wrap">';
-				html += '							<div class="img-case active">';
-				html += '								<img src="../img/ss-01-blue-01.jpg" class="w-100">';
-				html += '								<img src="../img/ss-01-blue-02.jpg" class="w-100">';
-				html += '							</div>';
-				html += '							<div class="bt bt-icon bt-heart">';
-				html += '								<div class="popper">';
-				html += '									Login to use Wishlist <i class="fa fa-caret-right"></i>';
-				html += '								</div>';
-				html += '								<i class="far fa-heart"></i>';
-				html += '							</div>';
-				html += '							<div class="bt bt-icon bt-sync">';
-				html += '								<div class="popper">';
-				html += '									Compare <i class="fa fa-caret-right"></i>';
-				html += '								</div>';
-				html += '								<i class="fa fa-sync"></i>';
-				html += '							</div>';
-				html += '							<div class="bt bt-icon bt-search">';
-				html += '								<div class="popper">';
-				html += '									Quick View <i class="fa fa-caret-right"></i>';
-				html += '								</div>';
-				html += '								<i class="fa fa-search-plus"></i>';
-				html += '							</div>';
-				html += '						</div>';
-				html += '						<div class="color">';
-				html += '							<span class="blue">●</span>';
-				html += '						</div>';
-				html += '						<div class="title">Yus condntum sapien</div>';
-				html += '						<div class="brand">BASEL</div>';
-				html += '						<div class="price">$592.00</div>';
-				html += '					</div>';	// .slide
+				html += '<div class="slide">';
+				html += '	<div class="img-wrap">';
+				for(var k in r.navs[i].slides[j].cases) {
+					html += '<div class="img-case '+(k == 0 ? "active": "")+'">';
+					for(var l in r.navs[i].slides[j].cases[k].img) {
+						html += '<img src="'+r.navs[i].slides[j].cases[k].img[l]+'" class="w-100">';
+					}
+					html += '</div>';
+				}
+				html += '		<div class="bt bt-icon bt-heart">';
+				html += '			<div class="popper">';
+				html += '				Login to use Wishlist <i class="fa fa-caret-right"></i>';
+				html += '			</div>';
+				html += '			<i class="far fa-heart"></i>';
+				html += '		</div>';
+				html += '		<div class="bt bt-icon bt-sync">';
+				html += '			<div class="popper">';
+				html += '				Compare <i class="fa fa-caret-right"></i>';
+				html += '			</div>';
+				html += '			<i class="fa fa-sync"></i>';
+				html += '		</div>';
+				html += '		<div class="bt bt-icon bt-search">';
+				html += '			<div class="popper">';
+				html += '				Quick View <i class="fa fa-caret-right"></i>';
+				html += '			</div>';
+				html += '			<i class="fa fa-search-plus"></i>';
+				html += '		</div>';
+				html += '	</div>';
+				html += '	<div class="color">';
+				for(var k in r.navs[i].slides[j].cases) {
+					html += '<span class="'+r.navs[i].slides[j].cases[k].color+'">●</span>';
+				}
+				html += '	</div>';
+				html += '	<div class="title">'+r.navs[i].slides[j].title+'</div>';
+				html += '	<div class="brand">'+r.navs[i].slides[j].brand+'</div>';
+				html += '	<div class="price">';
+				if(r.navs[i].slides[j].price !== "") 
+					html += r.navs[i].slides[j].price;
+				else {
+					html += '<span class="price-def">'+r.navs[i].slides[j].priceDef+'</span> ';
+					html += '<span class="price-sale">'+r.navs[i].slides[j].priceSale+'</span>';
+				}
+				html += '	</div>';
+				html += '</div>';	// .slide
 			}
 			html += '				</div>'; // .wrap
 			html += '				<div class="bt-pager bt-prev">〈</div>';
