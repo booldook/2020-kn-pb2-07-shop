@@ -103,6 +103,9 @@ function onNaviLoad(r) {
 					}
 					html += '</div>';
 				}
+				html += '		<div class="bt bt-quick">';
+				html += '			<i class="fa fa-shopping-cart"></i> QUICK SHOP';
+				html += '		</div>';
 				html += '		<div class="bt bt-icon bt-heart">';
 				html += '			<div class="popper">';
 				html += '				Login to use Wishlist <i class="fa fa-caret-right"></i>';
