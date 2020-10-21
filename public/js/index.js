@@ -77,13 +77,13 @@ function onNaviLoad(r) {
 			}
 			html += '		</div>';
 			html += '		<div class="infos">';
-			for(var k in r.navs[i].infos) {
+			for(var j in r.navs[i].infos) {
 				html += '<div class="info">';
 				html += '	<div class="title">';
-				html += '		<i class="'+r.navs[i].infos[k].icon+'"></i> ';
-				html += 		r.navs[i].infos[k].title;
+				html += '		<i class="'+r.navs[i].infos[j].icon+'"></i> ';
+				html += 		r.navs[i].infos[j].title;
 				html += '	</div>';
-				html += '	<div class="content">'+r.navs[i].infos[k].content+'</div>';
+				html += '	<div class="content">'+r.navs[i].infos[j].content+'</div>';
 				html += '</div>';
 			}
 			html += '		</div>';
@@ -92,39 +92,42 @@ function onNaviLoad(r) {
 			html += '		<div class="sub-slide">';
 			html += '			<div class="stage">';
 			html += '				<div class="wrap">';
-			html += '					<div class="slide">';
-			html += '						<div class="img-wrap">';
-			html += '							<div class="img-case active">';
-			html += '								<img src="../img/ss-01-blue-01.jpg" class="w-100">';
-			html += '								<img src="../img/ss-01-blue-02.jpg" class="w-100">';
-			html += '							</div>';
-			html += '							<div class="bt bt-icon bt-heart">';
-			html += '								<div class="popper">';
-			html += '									Login to use Wishlist <i class="fa fa-caret-right"></i>';
-			html += '								</div>';
-			html += '								<i class="far fa-heart"></i>';
-			html += '							</div>';
-			html += '							<div class="bt bt-icon bt-sync">';
-			html += '								<div class="popper">';
-			html += '									Compare <i class="fa fa-caret-right"></i>';
-			html += '								</div>';
-			html += '								<i class="fa fa-sync"></i>';
-			html += '							</div>';
-			html += '							<div class="bt bt-icon bt-search">';
-			html += '								<div class="popper">';
-			html += '									Quick View <i class="fa fa-caret-right"></i>';
-			html += '								</div>';
-			html += '								<i class="fa fa-search-plus"></i>';
-			html += '							</div>';
-			html += '						</div>';
-			html += '						<div class="color">';
-			html += '							<span class="blue">●</span>';
-			html += '						</div>';
-			html += '						<div class="title">Yus condntum sapien</div>';
-			html += '						<div class="brand">BASEL</div>';
-			html += '						<div class="price">$592.00</div>';
-			html += '					</div>';
-			html += '				</div>';
+			r.navs[i].slides.push(r.navs[i].slides[0]);
+			for(var j in r.navs[i].slides) {
+				html += '					<div class="slide">';
+				html += '						<div class="img-wrap">';
+				html += '							<div class="img-case active">';
+				html += '								<img src="../img/ss-01-blue-01.jpg" class="w-100">';
+				html += '								<img src="../img/ss-01-blue-02.jpg" class="w-100">';
+				html += '							</div>';
+				html += '							<div class="bt bt-icon bt-heart">';
+				html += '								<div class="popper">';
+				html += '									Login to use Wishlist <i class="fa fa-caret-right"></i>';
+				html += '								</div>';
+				html += '								<i class="far fa-heart"></i>';
+				html += '							</div>';
+				html += '							<div class="bt bt-icon bt-sync">';
+				html += '								<div class="popper">';
+				html += '									Compare <i class="fa fa-caret-right"></i>';
+				html += '								</div>';
+				html += '								<i class="fa fa-sync"></i>';
+				html += '							</div>';
+				html += '							<div class="bt bt-icon bt-search">';
+				html += '								<div class="popper">';
+				html += '									Quick View <i class="fa fa-caret-right"></i>';
+				html += '								</div>';
+				html += '								<i class="fa fa-search-plus"></i>';
+				html += '							</div>';
+				html += '						</div>';
+				html += '						<div class="color">';
+				html += '							<span class="blue">●</span>';
+				html += '						</div>';
+				html += '						<div class="title">Yus condntum sapien</div>';
+				html += '						<div class="brand">BASEL</div>';
+				html += '						<div class="price">$592.00</div>';
+				html += '					</div>';	// .slide
+			}
+			html += '				</div>'; // .wrap
 			html += '				<div class="bt-pager bt-prev">〈</div>';
 			html += '				<div class="bt-pager bt-next">〉</div>';
 			html += '			</div>';

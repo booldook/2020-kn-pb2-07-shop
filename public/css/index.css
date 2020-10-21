@@ -68,9 +68,9 @@ html, body {font-size: 16px;}
 .title-wrapper .navi1 .info i {margin-right: 4px;}
 .title-wrapper .navi1 .info > .content {color: #aaa; font-size: 0.875em;}
 
-.title-wrapper .navi1 .rt {flex: 25% 0 0;}
+.title-wrapper .navi1 .rt {flex: 25% 0 0; padding-left: 2%;}
 
-.title-wrapper .navi1 .sub-slide {width: 300px; margin: auto;}
+.title-wrapper .navi1 .sub-slide {width: 100%; margin: auto;}
 .title-wrapper .navi1 .sub-slide .stage {position: relative; overflow: hidden;}
 .title-wrapper .navi1 .sub-slide .wrap {position: relative; display: flex; width: 400%;}
 .title-wrapper .navi1 .sub-slide .slide {position: relative; flex: 25% 0 0; text-align: center;}
