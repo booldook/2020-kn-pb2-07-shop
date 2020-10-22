@@ -77,7 +77,7 @@ function onNaviLoad(r) {
 		}
 		html += '</div>';
 		html += '<div class="sub-wrap">';
-		if (r.navs[i].class === 'IMAGE') {
+		if (r.navs[i].class.indexOf('IMAGE') > -1) {
 			for (var j in r.navs[i].subs) {
 				html += '<div class="sub">';
 				html += '<div class="title">' + r.navs[i].subs[j].title + '</div>';
@@ -85,10 +85,11 @@ function onNaviLoad(r) {
 				html += '</div>';
 			}
 		}
-		if (r.navs[i].class === 'FULL') {
+		else if (r.navs[i].class.indexOf('FULL') > -1) {
 			html += '<div class="wrapper">';
 			html += '	<div class="lt">';
 			html += columnMaker(r.navs[i].subs);
+			console.log(html);
 			html += '		<div class="infos">';
 			for (var j in r.navs[i].infos) {
 				html += '<div class="info">';
@@ -163,19 +164,9 @@ function onNaviLoad(r) {
 			html += '	</div>'; // .rt
 			html += '<div>';
 		}
-		if (r.navs[i].class == 'COL1') {
-			for (var j in r.navs[i].subs) {
-				html += '<div class="name rel">' + r.navs[i].subs[j].title;
-				if (r.navs[i].subs[j].icon != '') {
-					html += '<div class="icon ' + r.navs[i].subs[j].color + '">' + r.navs[i].subs[j].icon;
-					html += '<i class="fas fa-caret-right"></i>';
-					html += '</div>';
-				}
-				html += '</div>';
-			}
+		else if (r.navs[i].class.indexOf('COL') > -1) {
+			html += columnMaker(r.navs[i].subs);
 		}
-		if (r.navs[i].class == 'COL3') {}
-		if (r.navs[i].class == 'COL4') {}
 		html += '</div>'; // .sub-wrap
 		html += '</div>'; // .navi
 		console.log(html);

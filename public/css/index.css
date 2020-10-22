@@ -57,12 +57,7 @@ html, body {font-size: 16px;}
 .title-wrapper .FULL .sub-wrap {width: 100%; top: 122px !important;}
 .title-wrapper .FULL .sub-wrap > .wrapper {display: flex; padding: 2em 0;}
 .title-wrapper .FULL .lt {flex: 75% 0 0; border-right: 1px solid #ccc;}
-.title-wrapper .FULL .subs {display: flex;}
-.title-wrapper .FULL .sub {flex: 23% 0 0; margin: 0 1%; display: flex; flex-direction: column; align-items: flex-start;}
-.title-wrapper .FULL .sub > .title {font-weight: bold; color: #666; padding-bottom: 1em; transition: all 0.5s; cursor: pointer;}
-.title-wrapper .FULL .sub > .title:hover {color: #339059;}
-.title-wrapper .FULL .sub > .name {color: #aaa; font-size: 0.875em; padding: 0.375em 0; transition: all 0.5s; cursor: pointer;}
-.title-wrapper .FULL .sub > .name:hover {transform: translateX(8px); color: #339059;}
+
 .title-wrapper .FULL .infos {display: flex; margin: 1em 0;}
 .title-wrapper .FULL .info {flex: 22% 0 0; margin-right: 3%;}
 .title-wrapper .FULL .info:not(:last-child) {border-right: 1px solid #ccc;}
@@ -118,9 +113,25 @@ html, body {font-size: 16px;}
 .title-wrapper .FULL .sub-slide .bt-prev {left: 0;}
 .title-wrapper .FULL .sub-slide .bt-next {right: 0;}
 
-.title-wrapper .COL1 .sub-wrap {flex-direction: column; align-items: flex-start; min-width: 200px; padding: 0 1em;}
-.title-wrapper .COL1 .name {color: #aaa; font-size: 0.875em; padding: 0.75em 0; transition: all 0.5s; cursor: pointer; position: relative;}
-.title-wrapper .COL1 .name:hover {transform: translateX(8px); color: #339059;}
+/** COL-type ***************************/
+.title-wrapper .COL .subs {display: flex; padding: 8px 20px;}
+.title-wrapper .COL .sub {margin: 0 1%; display: flex; flex-direction: column; align-items: flex-start;}
+.title-wrapper .COL .sub > .title {font-weight: bold; color: #666; padding-bottom: 1em; transition: all 0.5s; cursor: pointer;}
+.title-wrapper .COL .sub > .title:hover {color: #339059;}
+.title-wrapper .COL .sub > .name {color: #aaa; font-size: 0.875em; padding: 0.375em 0; transition: all 0.5s; cursor: pointer;}
+.title-wrapper .COL .sub > .name:hover {transform: translateX(8px); color: #339059;}
+
+.title-wrapper .COL1 .subs {min-width: 200px;}
+.title-wrapper .COL2 .subs {min-width: 400px;}
+.title-wrapper .COL3 .subs {min-width: 600px;}
+.title-wrapper .COL4 .subs {min-width: 800px;}
+
+.title-wrapper .COL1 .sub {flex: 98% 0 0;}
+.title-wrapper .COL2 .sub {flex: 48% 0 0;}
+.title-wrapper .COL3 .sub {flex: 31.3333% 0 0;}
+.title-wrapper .COL4 .sub {flex: 23% 0 0;}
+
+
 
 .title-wrapper > .cart-wrap i {font-size: 1.125em; color: #333;}
 .title-wrapper > .cart-wrap > div {margin: 0 1em;}
