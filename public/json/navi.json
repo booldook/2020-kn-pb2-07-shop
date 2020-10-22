@@ -129,12 +129,21 @@
 				}
 			]
 		},
-		{"title": "BLOG", "link": "#", "class":"navi2", "icon": "", "subs": []},
+		{"title": "BLOG", "link": "#", "class":"navi2", "icon": "", "subs": [
+			{"title": "BLOG DEFAULT", "link": "#", "icon":""},
+			{"title": "ALTERNATIVE STYLE", "link": "#", "icon":""},
+			{"title": "BLOG FULL WIDTH", "link": "#", "icon":""},
+			{"title": "SMALL IMAGES", "link": "#", "icon":""},
+			{"title": "MASONRY GRID", "link": "#", "icon":""},
+			{"title": "BLOG MASK", "link": "#", "icon":"HOT"},
+			{"title": "4 COLUMNS", "link": "#", "icon":""},
+			{"title": "BLOG SINGLE POST", "link": "#", "icon":""},
+			{"title": "BLOG RTL", "link": "#", "icon":"NEW"}
+		]},
 		{"title": "PAGES", "link": "#", "class":"navi3", "icon": "", "subs": []},
 		{"title": "FEATURES", "link": "#", "class":"navi4", "icon": "", "subs": []}
 	]
 }
-
 
 
 

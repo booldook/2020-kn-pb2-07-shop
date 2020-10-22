@@ -168,6 +168,8 @@ function onNaviLoad(r) {
 	$(".sub-slide .bt-prev").click(onSubPrevClick);
 	$(".sub-slide .bt-next").click(onSubNextClick);
 }
+
+
 /*
 <div class="navi">
 	<span class="title">HOME <i class="fa fa-angle-down"></i></span>
