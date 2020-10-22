@@ -140,10 +140,49 @@
 			{"title": "BLOG SINGLE POST", "link": "#", "icon":""},
 			{"title": "BLOG RTL", "link": "#", "icon":"NEW", "color": "green"}
 		]},
-		{"title": "PAGES", "link": "#", "class":"COL4", "icon": "", "subs": []},
-		{"title": "FEATURES", "link": "#", "class":"COL3", "icon": "", "subs": []}
+		{"title": "PAGES", "link": "#", "class":"COL4", "icon": "", "subs": [
+			{"title": "PAGE", "link": "#", "subs": [
+				{"title": "FaQs", "link": "#", "icon": "", "color": ""},
+				{"title": "About Me", "link": "#", "icon": "", "color": ""},
+				{"title": "Our Shop", "link": "#", "icon": "", "color": ""},
+				{"title": "Contact Us", "link": "#", "icon": "", "color": ""},
+				{"title": "Contact Us 2", "link": "#", "icon": "", "color": ""},
+				{"title": "Shortcode Helper", "link": "#", "icon": "", "color": ""}
+			]},
+			{"title": "HEADERS", "link": "#", "subs": [
+				{"title": "Header base", "link": "#", "icon": "", "color": ""},
+				{"title": "Categories menu", "link": "#", "icon": "HOT", "color": "yellow"},
+				{"title": "Simplified", "link": "#", "icon": "", "color": ""},
+				{"title": "With logo center", "link": "#", "icon": "", "color": ""},
+				{"title": "Split menu", "link": "#", "icon": "", "color": ""},
+				{"title": "Header vertical", "link": "#", "icon": "", "color": ""},
+				{"title": "Dark header", "link": "#", "icon": "", "color": ""}
+			]},
+			{"title": "PORTFOLIO", "link": "#", "subs": [
+				{"title": "Grid 4 Columns", "link": "#", "icon": "", "color": ""},
+				{"title": "Grid No Space", "link": "#", "icon": "", "color": ""},
+				{"title": "Grid full width", "link": "#", "icon": "", "color": ""},
+				{"title": "Alternative style", "link": "#", "icon": "", "color": ""},
+				{"title": "Grid with text", "link": "#", "icon": "", "color": ""},
+				{"title": "Single Project", "link": "#", "icon": "", "color": ""},
+				{"title": "Project Full Width", "link": "#", "icon": "", "color": ""},
+				{"title": "Project with video", "link": "#", "icon": "", "color": ""}
+			]},
+			{"title": "SHOPS", "link": "#", "subs": [
+				{"title": "<i class=\"fa fa-shopping-cart\"></i> Shopping Cart", "link": "#", "icon": "", "color": ""},
+				{"title": "<i class=\"fa fa-user\"></i> My Account", "link": "#", "icon": "", "color": ""},
+				{"title": "<i class=\"fa fa-heart\"></i> Wishlist", "link": "#", "icon": "", "color": ""},
+				{"title": "404 Not Found", "link": "#", "icon": "", "color": ""},
+				{"title": "Password", "link": "#", "icon": "", "color": ""},
+				{"title": "Password 2", "link": "#", "icon": "", "color": ""}
+			]}
+		]},
+		{"title": "FEATURES", "link": "#", "class":"COL3", "icon": "", "subs": [
+			
+		]}
 	]
 }
+
 
 
 
