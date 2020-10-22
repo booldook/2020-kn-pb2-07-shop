@@ -49,7 +49,7 @@ function onNaviLoad(r) {
 		} 
 		html += '</div>';
 		html += '<div class="sub-wrap">';
-		if(i == 0) {
+		if(r.navs[i].class === 'IMAGE') {
 			for(var j in r.navs[i].subs) {
 				html += '<div class="sub">';
 				html += '<div class="title">'+r.navs[i].subs[j].title+'</div>';
@@ -57,7 +57,7 @@ function onNaviLoad(r) {
 				html += '</div>';
 			}
 		}
-		else if(i == 1) {
+		if(r.navs[i].class === 'FULL') {
 			html += '<div class="wrapper">';
 			html += '	<div class="lt">';
 			html += '		<div class="subs">';
@@ -150,6 +150,19 @@ function onNaviLoad(r) {
 			html += '	</div>';	// .rt
 			html += '<div>';
 		}
+		if(r.navs[i].class == 'COL1'){
+			for(var j in r.navs[i].subs) {
+				html += '<div class="name rel">'+r.navs[i].subs[j].title;
+				if(r.navs[i].subs[j].icon != ''){
+					html += '<div class="icon '+r.navs[i].subs[j].color+'">'+r.navs[i].subs[j].icon;
+					html += '<i class="fas fa-caret-right"></i>';
+					html += '</div>';
+				}
+				html +='</div>';
+			}
+		}
+		if(r.navs[i].class == 'COL3'){}
+		if(r.navs[i].class == 'COL4'){}
 		html += '</div>';	// .sub-wrap
 		html += '</div>'; // .navi
 		console.log(html);
