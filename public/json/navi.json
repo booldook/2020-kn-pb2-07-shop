@@ -179,12 +179,35 @@
 				{"title": "Password 2", "link": "#", "icon": "", "color": ""}
 			]}
 		]},
-		{"title": "FEATURES", "link": "#", "class":"COL COL3", "icon": "", "subs": [
-			
+		{"title": "FEATURES", "link": "#", "class":"COL COL3", "bg": "", "icon": "", "subs": [
+			{"title": "PRODUCT PAGE", "link": "", "icon": "", "subs": [
+					{"title": "Product Custom Attributes", "link": "#", "icon":"NEW", "color": "green"},
+					{"title": "Add to cart button 3d", "link": "#", "icon":"HOT", "color": "yellow"},
+					{"title": "Product Trust seal", "link": "#", "icon":"NEW", "color": "green"},
+					{"title": "Product Real time Visitor", "link": "#", "icon":""},
+					{"title": "Product pre-orders", "link": "#", "icon":""},
+					{"title": "Label for products", "link": "#", "icon":""},
+					{"title": "Product countdown", "link": "#", "icon":"HOT", "color": "yellow"},
+					{"title": "Product dropdown simple", "link": "#", "icon":""},
+					{"title": "Variant images grouped", "link": "#", "icon":""}
+			]},
+			{"title": "BASEL ELEMENTS", "link": "", "icon": "", "subs": [
+					{"title": "AJAX products tabs", "link": "#", "icon":"HOT", "color": "yellow"},
+					{"title": "Product AJAX arrows", "link": "#", "icon":""},
+					{"title": "Categories menu", "link": "#", "icon":"HOT", "color": "yellow"},
+					{"title": "360 degree view", "link": "#", "icon":""},
+					{"title": "Menu price", "link": "#", "icon":""}
+			]},
+			{"title": "ELEMENTS", "link": "", "icon": "", "subs": [
+					{"title": "Quick shop", "link": "#", "icon":"HOT", "color": "yellow"},
+					{"title": "Grid/List switcher", "link": "#", "icon":"HOT", "color": "yellow"},
+					{"title": "Load more", "link": "#", "icon":""},
+					{"title": "Infinit scrolling", "link": "#", "icon":"NEW", "color": "green"},
+					{"title": "RTL Ready", "link": "#", "icon":""}
+			]}
 		]}
 	]
 }
-
 
 
 
