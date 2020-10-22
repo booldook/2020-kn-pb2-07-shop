@@ -179,9 +179,9 @@
 				{"title": "Password 2", "link": "#", "icon": "", "color": ""}
 			]}
 		]},
-		{"title": "FEATURES", "link": "#", "class":"COL COL3", "bg": "", "icon": "", "subs": [
+		{"title": "FEATURES", "link": "#", "class":"COL COL3 BG", "bg": "", "icon": "", "subs": [
 			{"title": "PRODUCT PAGE", "link": "", "icon": "", "subs": [
-					{"title": "Product Custom Attributes", "link": "#", "icon":"NEW", "color": "green"},
+					{"title": "Product Attributes", "link": "#", "icon":"NEW", "color": "green"},
 					{"title": "Add to cart button 3d", "link": "#", "icon":"HOT", "color": "yellow"},
 					{"title": "Product Trust seal", "link": "#", "icon":"NEW", "color": "green"},
 					{"title": "Product Real time Visitor", "link": "#", "icon":""},

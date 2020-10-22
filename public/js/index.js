@@ -65,7 +65,7 @@ function columnMaker(data) {
 $.get('../json/navi.json', onNaviLoad);
 
 function onNaviLoad(r) {
-	console.log(r.navs);
+	// console.log(r.navs);
 	var html = '';
 	for (var i in r.navs) {
 		html = '<div class="navi ' + r.navs[i].class + '">';
@@ -89,7 +89,7 @@ function onNaviLoad(r) {
 			html += '<div class="wrapper">';
 			html += '	<div class="lt">';
 			html += columnMaker(r.navs[i].subs);
-			console.log(html);
+			// console.log(html);
 			html += '		<div class="infos">';
 			for (var j in r.navs[i].infos) {
 				html += '<div class="info">';
@@ -169,7 +169,7 @@ function onNaviLoad(r) {
 		}
 		html += '</div>'; // .sub-wrap
 		html += '</div>'; // .navi
-		console.log(html);
+		// console.log(html);
 		$(".navi-wrap").append(html);
 	}
 	$(".navi-wrap > .navi").mouseenter(onEnter);
