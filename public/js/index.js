@@ -197,6 +197,27 @@ function onNaviLoad(r) {
 	$(".sub-slide .bt-next").on("click", onSubNextClick);
 }
 
+// .navi-mo-icon click 콜백
+function onNaviMoClick(e) {
+	$(".mo-wrapper").css("display", "block");
+	$(".mo-wrapper").css("background-color");
+	$(".mo-wrapper").css("background-color", "rgba(0,0,0,0.6)");
+	$(".mo-wrap").css("left", 0);
+}
+
+// .mo-wrapper click 콜백
+function onMoWrapperClick(e) {
+	$(".mo-wrapper").css("background-color", "rgba(0,0,0,0)");
+	$(".mo-wrapper").delay(500).hide(0);
+	$(".mo-wrap").css("left", "-270px");
+}
+
+// .mo-wrap click 콜백
+function onMoWrapClick(e) {
+	e.stopPropagation();
+}
+
+
 // resize 콜백
 function onResize(e) {
 
@@ -222,9 +243,9 @@ function onScroll(e) {
 
 // .mo-wrapper scroll 콜백
 function onMobileScroll(e) {
-	console.log(e);
 	e.stopPropagation();
 	e.preventDefault();
+	// $("html, body").css({"overflow": "hidden", "height": "100vh"});
 }
 
 
@@ -234,10 +255,21 @@ function onMobileScroll(e) {
 // Main Navi 생성
 $.get('../json/navi.json', onNaviLoad);
 
+// .navi-mo-icon 클릭
+$(".navi-mo-icon").on("click", onNaviMoClick)
+
+// .mo-wrapper 클릭
+$(".mo-wrapper").on("click", onMoWrapperClick);
+
+// .mo-wrap 클릭
+$(".mo-wrap").on("click", onMoWrapClick);
+
 // 스크롤 이벤트
-document.querySelector(".mo-wrapper").addEventListener("scroll", onMobileScroll);
 $(window).on("scroll", onScroll);
+$(".mo-wrapper").on("scroll touchmove mousewheel", onMobileScroll);
 
 // 리사이즈 이벤트
 $(window).on("resize", onResize);
+
+
 
