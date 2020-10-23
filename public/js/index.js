@@ -193,8 +193,32 @@ function onNaviLoad(r) {
 		},
 		threshold: 30
 	});
-	$(".sub-slide .bt-prev").click(onSubPrevClick);
-	$(".sub-slide .bt-next").click(onSubNextClick);
+	$(".sub-slide .bt-prev").on("click", onSubPrevClick);
+	$(".sub-slide .bt-next").on("click", onSubNextClick);
+}
+
+// resize 콜백
+function onResize(e) {
+
+}
+
+// scroll 콜백
+function onScroll(e) {
+	var scTop = $(this).scrollTop();
+	console.log(scTop);
+	
+	// header의 fixed
+	if(scTop > 180) {
+		$(".top-wrapper").css("display", "none");
+		$(".search-wrapper").css("display", "none");
+		$(".header-wrapper").css({ "position": "fixed", "top": 0, 
+		"box-shadow": "0 0 6px rgba(0,0,0,0.3)" });
+	}
+	else {
+		$(".top-wrapper").css("display", "block");
+		$(".search-wrapper").css("display", "flex");
+		$(".header-wrapper").css({ "position": "static", "top": "-85px", "box-shadow": "none" });
+	}
 }
 
 /** 이벤트 등록 **********************/
@@ -203,60 +227,9 @@ function onNaviLoad(r) {
 // Main Navi 생성
 $.get('../json/navi.json', onNaviLoad);
 
+// 스크롤 이벤트
+$(window).on("scroll", onScroll);
 
+// 리사이즈 이벤트
+$(window).on("resize", onResize);
 
-
-/*
-<div class="navi">
-	<span class="title">HOME <i class="fa fa-angle-down"></i></span>
-	<div class="sub-wrap">
-		<div class="sub">
-			<div class="title">1. HOME DEFAULT</div>
-			<div class="cont-img"><img src="../img/default.jpg" alt="그림" class="w-100"></div>
-		</div>
-	</div>
-</div>
-
-
-
-<div class="sub-slide">
-	<div class="stage">
-		<div class="wrap">
-			<div class="slide">
-				<div class="img-wrap">
-					<div class="img-case active">
-						<img src="../img/ss-01-blue-01.jpg" class="w-100">
-						<img src="../img/ss-01-blue-02.jpg" class="w-100">
-					</div>
-					<div class="bt bt-icon bt-heart">
-						<div class="popper">
-							Login to use Wishlist <i class="fa fa-caret-right"></i>
-						</div>
-						<i class="far fa-heart"></i>
-					</div>
-					<div class="bt bt-icon bt-sync">
-						<div class="popper">
-							Compare <i class="fa fa-caret-right"></i>
-						</div>
-						<i class="fa fa-sync"></i>
-					</div>
-					<div class="bt bt-icon bt-search">
-						<div class="popper">
-							Quick View <i class="fa fa-caret-right"></i>
-						</div>
-						<i class="fa fa-search-plus"></i>
-					</div>
-				</div>
-				<div class="color">
-					<span class="blue">●</span>
-				</div>
-				<div class="title">Yus condntum sapien</div>
-				<div class="brand">BASEL</div>
-				<div class="price">$592.00</div>
-			</div>
-		</div>
-		<div class="bt-pager bt-prev">〈</div>
-		<div class="bt-pager bt-next">〉</div>
-	</div>
-</div>
-*/
