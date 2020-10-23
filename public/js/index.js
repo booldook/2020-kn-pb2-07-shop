@@ -217,6 +217,11 @@ function onMoWrapClick(e) {
 	e.stopPropagation();
 }
 
+// .mo-navi click 콜백
+function onMoNaviClick(e) {
+	$(this).toggleClass("active");
+}
+
 
 // resize 콜백
 function onResize(e) {
@@ -263,6 +268,9 @@ $(".mo-wrapper").on("click", onMoWrapperClick);
 
 // .mo-wrap 클릭
 $(".mo-wrap").on("click", onMoWrapClick);
+
+// .mo-navi .bt-down 클릭
+$(".mo-navi .bt-down").on("click", onMoNaviClick);
 
 // 스크롤 이벤트
 $(window).on("scroll", onScroll);
