@@ -147,6 +147,12 @@ html, body {font-size: 16px; height: 10000px;}
 .search-wrapper > .search-wrap > .input-search:focus {outline: none;}
 .search-wrapper > .search-wrap > .fa {position: absolute; top: 13px; right: 12px; font-size: 1.5em; color: #444; cursor: pointer;}
 
+/**************** .mo-wrapper ******************/
+.mo-wrapper {width: 100%; height: 100vh; position: fixed; top: 0; left: 0; z-index: 10000; background-color: rgba(0,0,0,0.6);}
+.mo-wrapper > .mo-wrap {width: 270px; height: 100%; background-color: #0c0c0c;}
+
+
+
 /**************** 반응형 ******************/
 /**************** 반응형 ******************/
 @media screen and (max-width: 1199px) {

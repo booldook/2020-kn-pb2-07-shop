@@ -202,10 +202,9 @@ function onResize(e) {
 
 }
 
-// scroll 콜백
+// window scroll 콜백
 function onScroll(e) {
 	var scTop = $(this).scrollTop();
-	console.log(scTop);
 	
 	// header의 fixed
 	if(scTop > 180) {
@@ -221,6 +220,14 @@ function onScroll(e) {
 	}
 }
 
+// .mo-wrapper scroll 콜백
+function onMobileScroll(e) {
+	console.log(e);
+	e.stopPropagation();
+	e.preventDefault();
+}
+
+
 /** 이벤트 등록 **********************/
 
 
@@ -228,6 +235,7 @@ function onScroll(e) {
 $.get('../json/navi.json', onNaviLoad);
 
 // 스크롤 이벤트
+document.querySelector(".mo-wrapper").addEventListener("scroll", onMobileScroll);
 $(window).on("scroll", onScroll);
 
 // 리사이즈 이벤트
