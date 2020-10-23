@@ -1,34 +1,11 @@
-function onEnter() {
-	$(this).find(".sub-wrap").css("display", "flex");
-}
+/** 전역변수선언 ************************************/
+var subNow = 0;		// .navi.FULL 에서의 슬라이드변수
+var subLast = 3;	// .navi.FULL 에서의 슬라이드변수
 
-function onLeave() {
-	$(this).find(".sub-wrap").css("display", "none");
-}
 
-function onColorClick() {
-	$(this).addClass("active").siblings().removeClass("active");
-	var $imgCase = $(this).parent().prev().find(".img-case");
-	$imgCase.stop().fadeOut(100);
-	$imgCase.eq($(this).index()).stop().delay(100).fadeIn(100);
-}
+/** 사용자 지정 함수 ********************************/
 
-var subNow = 0;
-var subLast = 3;
-
-function onSubPrevClick() {
-	if (subNow == 0) {
-		subNow = subLast - 1;
-		$(".sub-slide .wrap").css("left", -subLast * 100 + "%");
-	} else subNow--;
-	subAni();
-}
-
-function onSubNextClick() {
-	if (subNow < subLast) subNow++;
-	subAni();
-}
-
+// .navi.FULL 에서의 슬라이드
 function subAni() {
 	$(".sub-slide .wrap").stop().animate({
 		"left": -100 * subNow + "%"
@@ -40,6 +17,7 @@ function subAni() {
 	});
 }
 
+// .navi에서의 서브카테고리 생성
 function columnMaker(data) {
 	var html = '';
 	html += '<div class="subs">';
@@ -61,9 +39,42 @@ function columnMaker(data) {
 	return html;
 }
 
-/** Main Navi 생성 **********************/
-$.get('../json/navi.json', onNaviLoad);
+/** 이벤트 콜백 *************************************/
 
+// .navi 의 .sub-wrap 토글
+function onEnter() {
+	$(this).find(".sub-wrap").css("display", "flex");
+}
+
+// .navi 의 .sub-wrap 토글
+function onLeave() {
+	$(this).find(".sub-wrap").css("display", "none");
+}
+
+// .navi.FULL 의 슬라이드 이미지 교체
+function onColorClick() {
+	$(this).addClass("active").siblings().removeClass("active");
+	var $imgCase = $(this).parent().prev().find(".img-case");
+	$imgCase.stop().fadeOut(100);
+	$imgCase.eq($(this).index()).stop().delay(100).fadeIn(100);
+}
+
+// .navi.FULL 의 슬라이드 PREV
+function onSubPrevClick() {
+	if (subNow == 0) {
+		subNow = subLast - 1;
+		$(".sub-slide .wrap").css("left", -subLast * 100 + "%");
+	} else subNow--;
+	subAni();
+}
+
+// .navi.FULL 의 슬라이드 NEXT
+function onSubNextClick() {
+	if (subNow < subLast) subNow++;
+	subAni();
+}
+
+// .navi의 ajax 콜백
 function onNaviLoad(r) {
 	// console.log(r.navs);
 	var html = '';
@@ -185,6 +196,14 @@ function onNaviLoad(r) {
 	$(".sub-slide .bt-prev").click(onSubPrevClick);
 	$(".sub-slide .bt-next").click(onSubNextClick);
 }
+
+/** 이벤트 등록 **********************/
+
+
+// Main Navi 생성
+$.get('../json/navi.json', onNaviLoad);
+
+
 
 
 /*
