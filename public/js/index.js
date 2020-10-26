@@ -220,6 +220,8 @@ function onMoWrapClick(e) {
 // .mo-navi click 콜백
 function onMoNaviClick(e) {
 	$(this).toggleClass("active");
+	$(".mo-sub").stop().slideUp(300);
+	if($(this).hasClass("active")) $(this).next().stop().slideDown(300);
 }
 
 
