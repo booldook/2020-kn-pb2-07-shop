@@ -193,9 +193,13 @@ function onNaviLoad(r) {
 		html += '</div>';
 		html += '<ul class="mo-sub">';
 		html += '	<i class="mo-caret fa fa-caret-up"></i>';
+		if(r.navs[i].subs && r.navs[i].subs.length == 1) {
+			r.navs[i].subs = r.navs[i].subs[0].subs;
+		}
 		for(var j in r.navs[i].subs) {
 			html += '<li class="mo-sub-navi">';
 			html += '<div class="title">'+r.navs[i].subs[j].title+'</div>';
+			// console.log(r.navs[2].subs[0].subs);
 			if(r.navs[i].subs[j].subs && r.navs[i].subs[j].subs.length > 0) {
 				html += '<div class="bt-down">';
 				html += '	<div class="slash slash-lt"></div>';
@@ -264,7 +268,10 @@ function onMoNaviClick(e) {
 
 // resize 콜백
 function onResize(e) {
-
+	var winWid = $(this).outerWidth();
+	if(winWid > 991 && $(".mo-wrapper").css("display") == 'block') {
+		$(".mo-wrapper").trigger("click");
+	}
 }
 
 // window scroll 콜백
@@ -289,7 +296,13 @@ function onScroll(e) {
 function onMobileScroll(e) {
 	e.stopPropagation();
 	e.preventDefault();
-	// $("html, body").css({"overflow": "hidden", "height": "100vh"});
+}
+
+function onMobileWrapScroll(e) {
+	e.stopPropagation();
+	var winHei = $(window).outerHeight();
+	var meHei = $(this).find(".mo-navi-wrap").outerHeight();
+	if(meHei <= winHei) e.preventDefault();
 }
 
 
@@ -302,6 +315,7 @@ $.get('../json/navi.json', onNaviLoad);
 // 스크롤 이벤트
 $(window).on("scroll", onScroll);
 $(".mo-wrapper").on("scroll touchmove mousewheel", onMobileScroll);
+$(".mo-wrap").on("scroll touchmove mousewheel", onMobileWrapScroll);
 
 // 리사이즈 이벤트
 $(window).on("resize", onResize);

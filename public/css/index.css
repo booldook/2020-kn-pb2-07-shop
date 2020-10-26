@@ -151,7 +151,7 @@ html, body {font-size: 16px; height: 10000px;}
 
 /**************** .mo-wrapper ******************/
 .mo-wrapper {width: 100%; height: 100vh; position: fixed; top: 0; left: 0; z-index: 10000; background-color: rgba(0,0,0,0); transition: background-color 0.5s; display: none;}
-.mo-wrapper > .mo-wrap {width: 270px; height: 100%; position: absolute; left: -270px; top: 0; background-color: #0c0c0c; transition: left 0.5s; color: #f8f8f8;}
+.mo-wrapper > .mo-wrap {overflow-y: auto; width: 270px; height: 100%; position: absolute; left: -270px; top: 0; background-color: #0c0c0c; transition: left 0.5s; color: #f8f8f8;}
 .mo-search-wrap {padding: 0.625em; border-bottom: 2px solid #444; position: relative;}
 .mo-search-wrap .input-search {width: 100%; padding: 0.5em 1.5em; border: 1px solid #444; background-color: #252525; color: inherit;}
 .mo-search-wrap .input-search:focus {outline: none;}
