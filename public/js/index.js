@@ -183,6 +183,37 @@ function onNaviLoad(r) {
 		// console.log(html);
 		$(".navi-wrap").append(html);
 	}
+	// .mo-navi 생성
+	for(var i in r.navs) {
+		html  = '<li class="mo-navi">';
+		html += '<div class="title">'+r.navs[i].title+'</div>';
+		html += '<div class="bt-down">';
+		html += '	<div class="slash slash-lt"></div>';
+		html += '	<div class="slash slash-rt"></div>';
+		html += '</div>';
+		html += '<ul class="mo-sub">';
+		html += '	<i class="mo-caret fa fa-caret-up"></i>';
+		for(var j in r.navs[i].subs) {
+			html += '<li class="mo-sub-navi">';
+			html += '<div class="title">'+r.navs[i].subs[j].title+'</div>';
+			if(r.navs[i].subs[j].subs && r.navs[i].subs[j].subs.length > 0) {
+				html += '<div class="bt-down">';
+				html += '	<div class="slash slash-lt"></div>';
+				html += '	<div class="slash slash-rt"></div>';
+				html += '</div>';
+				html += '<ul class="mo-sub-sub">';
+				html += '	<i class="mo-caret fa fa-caret-up"></i>';
+				for(var k in r.navs[i].subs[j].subs) {
+					html += '<li>'+r.navs[i].subs[j].subs[k].title+'</li>';
+				}
+				html += '</ul>';
+			}
+			html += '</li>';
+		}
+		html += '</ul>';
+		html += '</li>';
+		$(".mo-navi-wrap").append(html);
+	}
 	$(".navi-wrap > .navi").mouseenter(onEnter);
 	$(".navi-wrap > .navi").mouseleave(onLeave);
 	$(".sub-slide .color").find("span").click(onColorClick);
@@ -195,7 +226,13 @@ function onNaviLoad(r) {
 	});
 	$(".sub-slide .bt-prev").on("click", onSubPrevClick);
 	$(".sub-slide .bt-next").on("click", onSubNextClick);
+	$(".navi-mo-icon").on("click", onNaviMoClick); // .navi-mo-icon 클릭 
+	$(".mo-wrapper").on("click", onMoWrapperClick);	// .mo-wrapper 클릭
+	$(".mo-wrap").on("click", onMoWrapClick);	// .mo-wrap 클릭
+	$(".mo-navi .bt-down").on("click", onMoNaviClick);	// .mo-navi .bt-down 클릭
 }
+
+
 
 // .navi-mo-icon click 콜백
 function onNaviMoClick(e) {
@@ -220,8 +257,8 @@ function onMoWrapClick(e) {
 // .mo-navi click 콜백
 function onMoNaviClick(e) {
 	$(this).toggleClass("active");
-	$(".mo-sub").stop().slideUp(300);
 	if($(this).hasClass("active")) $(this).next().stop().slideDown(300);
+	else $(this).next().stop().slideUp(300);
 }
 
 
@@ -261,18 +298,6 @@ function onMobileScroll(e) {
 
 // Main Navi 생성
 $.get('../json/navi.json', onNaviLoad);
-
-// .navi-mo-icon 클릭
-$(".navi-mo-icon").on("click", onNaviMoClick)
-
-// .mo-wrapper 클릭 
-$(".mo-wrapper").on("click", onMoWrapperClick);
-
-// .mo-wrap 클릭
-$(".mo-wrap").on("click", onMoWrapClick);
-
-// .mo-navi .bt-down 클릭
-$(".mo-navi .bt-down").on("click", onMoNaviClick);
 
 // 스크롤 이벤트
 $(window).on("scroll", onScroll);

@@ -161,9 +161,15 @@ html, body {font-size: 16px; height: 10000px;}
 .mo-navi-wrap .mo-navi {border-bottom: 1px solid #222; position: relative;}
 .mo-navi-wrap .mo-navi > .title {padding: 1em;}
 .mo-navi-wrap .mo-navi > .mo-sub {position: relative; display: none;}
-.mo-navi-wrap .mo-navi > .mo-sub > i {position: absolute; color: #171717; font-size: 1.5em; left: 20px; top: -15px;}
-.mo-navi-wrap .mo-navi > .mo-sub > li {border-top: 1px solid #222; padding: 1.125em; background-color: #171717; font-size: 0.875em; color: #ccc; cursor: pointer;}
+.mo-navi-wrap .mo-navi > .mo-sub > li {border-top: 1px solid #222; background-color: #171717; font-size: 0.875em; color: #ccc; cursor: pointer;}
 .mo-navi-wrap .mo-navi > .mo-sub > li:hover {color: #f8f8f8;}
+
+.mo-navi-wrap .mo-sub-navi {border-bottom: 1px solid #222; position: relative;}
+.mo-navi-wrap .mo-sub-navi > .title {padding: 17px;}
+.mo-navi-wrap .mo-sub-sub {position: relative; display: none;}
+.mo-navi-wrap .mo-sub-sub > li {border-top: 1px solid #222; background-color: #343434; color: #ccc; cursor: pointer; padding: 17px;}
+.mo-navi-wrap .mo-sub-sub > li:hover {color: #f8f8f8;}
+
 .mo-navi-wrap .bt-down {width: 56px; height: 56px; border-left: 1px solid #222; position: absolute; top:0; right: 0; display: flex; justify-content: center; align-items: center; cursor: pointer;}
 .mo-navi-wrap .slash {transition: transform 0.5s;}
 .mo-navi-wrap .slash-lt {transform: translateX(2px);}
@@ -174,6 +180,8 @@ html, body {font-size: 16px; height: 10000px;}
 .mo-navi-wrap .bt-down.active {background-color: #339059;}
 .mo-navi-wrap .bt-down.active .slash-lt {transform: translateX(6px);}
 .mo-navi-wrap .bt-down.active .slash-rt {transform: translateX(-6px);}
+.mo-navi-wrap .mo-caret {position: absolute; color: #171717; font-size: 1.5em; left: 20px; top: -15px;}
+.mo-navi-wrap .mo-sub-sub .mo-caret {color: #343434; top: -13px; left: 34px;}
 
 
 /**************** 반응형 ******************/
