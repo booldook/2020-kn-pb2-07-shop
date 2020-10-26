@@ -263,7 +263,7 @@ $.get('../json/navi.json', onNaviLoad);
 // .navi-mo-icon 클릭
 $(".navi-mo-icon").on("click", onNaviMoClick)
 
-// .mo-wrapper 클릭
+// .mo-wrapper 클릭 
 $(".mo-wrapper").on("click", onMoWrapperClick);
 
 // .mo-wrap 클릭

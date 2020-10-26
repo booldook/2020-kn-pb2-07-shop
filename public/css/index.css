@@ -126,6 +126,7 @@ html, body {font-size: 16px; height: 10000px;}
 .title-wrapper .COL .sub > .name {color: #aaa; font-size: 0.875em; padding: 0.375em 0; transition: all 0.5s; cursor: pointer;}
 .title-wrapper .COL .sub > .name:hover {transform: translateX(8px); color: #339059;}
 
+.title-wrapper .COL3.BG .sub-wrap {padding-right: 200px; background: #fff url(../img/menu-baner-1.jpg) no-repeat right bottom; background-size: auto 100%;}
 .title-wrapper .COL1 .sub {flex: 100% 0 0;}
 .title-wrapper .COL2 .sub {flex: 50% 0 0;}
 .title-wrapper .COL3 .sub {flex: 33.3333% 0 0;}
