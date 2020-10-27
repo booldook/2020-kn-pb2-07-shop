@@ -1,0 +1,7 @@
+{
+	"banners": [
+		{"id": 1, "src": "../img/slider-1.jpg", "slogan": "Best furniture for your house", "title": "DESIGN CHAIR", "link": "#", "price": 799},
+		{"id": 2, "src": "../img/slider-2.jpg", "slogan": "Best furniture for your castle", "title": "YELLOW SOFA", "link": "#", "price": 899},
+		{"id": 3, "src": "../img/slider-3.jpg", "slogan": "Best furniture for your office", "title": "WOOD CHAIR", "link": "#", "price": 1099}
+	]
+}

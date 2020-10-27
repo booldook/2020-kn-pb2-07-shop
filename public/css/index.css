@@ -186,13 +186,21 @@ html, body {font-size: 16px; height: 10000px; font-family: 'Rubik', sans-serif;}
 
 /**************** .banner-wrapper ******************/
 .banner-wrapper {background-color: #eee; height: 522px; position: relative;}
-.banner-wrapper > .slide-stage {}
-.banner-wrapper > .wrapper {position: absolute; height: 100%; top: 0; left: 50%; transform: translateX(-50%); display: flex; }
-.banner-wrapper > .wrapper > .cate-wrap {flex: 30% 0 0; height: 100%; display: flex; flex-direction: column; justify-content: space-between;}
+.banner-wrapper > .wrapper {position: relative;}
+.banner-wrapper > .wrapper > .cate-wrap {position: absolute; width: 30%; height: 522px; display: flex; flex-direction: column; justify-content: space-between; z-index: 11;}
 
 .banner-wrapper > .wrapper > .cate-wrap > .cate {flex-grow: 1; display: flex; align-items: center; justify-content: space-between; padding: 0 1.75em; font-size: 0.75em; background-color: #339059; color: #fff; font-weight: 500; cursor: pointer;}
 .banner-wrapper > .wrapper > .cate-wrap > .cate:hover {background-color: #fbbc34;}
 
+.banner-wrapper .slide-stage {position: relative; height: 100%; overflow: hidden; z-index: 10;}
+.banner-wrapper .slide-wrap {width: 300%; display: flex; position: relative;}
+.banner-wrapper .slide {flex: 33.3333%;}
+.banner-wrapper .bt {position: absolute; top: 50%; transform: translateY(-50%); color: #777; font-size: 3em; transition: all 0.5s; opacity: 0; cursor: pointer;}
+.banner-wrapper .bt:hover {color: #222;}
+.banner-wrapper .bt-prev {left: 12px;}
+.banner-wrapper .bt-next {right: 12px;}
+
+.banner-wrapper .slide-stage:hover .bt {opacity: 1;}
 
 
 /**************** 반응형 ******************/
