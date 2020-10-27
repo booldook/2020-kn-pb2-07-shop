@@ -5,10 +5,12 @@
 wrapper 1144px
 
 font-family: 'Rubik', sans-serif;
+font-family: 'Lora', serif;
 */
 
 /**************** 공통사항 ******************/
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
 
 html, body {font-size: 16px; height: 10000px; font-family: 'Rubik', sans-serif;}
 .wrapper {width: 1100px; margin: 0 auto;}
@@ -192,16 +194,20 @@ html, body {font-size: 16px; height: 10000px; font-family: 'Rubik', sans-serif;}
 .banner-wrapper > .wrapper > .cate-wrap > .cate {flex-grow: 1; display: flex; align-items: center; justify-content: space-between; padding: 0 1.75em; font-size: 0.75em; background-color: #339059; color: #fff; font-weight: 500; cursor: pointer;}
 .banner-wrapper > .wrapper > .cate-wrap > .cate:hover {background-color: #fbbc34;}
 
-.banner-wrapper .slide-stage {position: relative; height: 100%; overflow: hidden; z-index: 10;}
-.banner-wrapper .slide-wrap {width: 300%; display: flex; position: relative;}
-.banner-wrapper .slide {flex: 33.3333%;}
 .banner-wrapper .bt {position: absolute; top: 50%; transform: translateY(-50%); color: #777; font-size: 3em; transition: all 0.5s; opacity: 0; cursor: pointer;}
 .banner-wrapper .bt:hover {color: #222;}
 .banner-wrapper .bt-prev {left: 12px;}
 .banner-wrapper .bt-next {right: 12px;}
-
 .banner-wrapper .slide-stage:hover .bt {opacity: 1;}
 
+.banner-wrapper .slide-stage {position: relative; height: 100%; overflow: hidden; z-index: 10;}
+.banner-wrapper .slide-wrap {width: 300%; height: 100%; display: flex; position: relative;}
+.banner-wrapper .slide {flex: 33.3333% 0 0; height: 100%; background-position: center top; background-size: cover; background-repeat: no-repeat; display: flex; flex-direction: column; justify-content: center; align-items: center;}
+.banner-wrapper .slide .slogan {font-family: 'Lora', serif; font-style: italic; color: #339059; font-size: 1.5em;}
+.banner-wrapper .slide .title {}
+.banner-wrapper .slide .price {}
+.banner-wrapper .slide .bt-banner {}
+.banner-wrapper .slide:first-child {background-image: url(../img/slider-1.jpg);}
 
 /**************** 반응형 ******************/
 /**************** 반응형 ******************/
