@@ -10,7 +10,7 @@ font-family: 'Rubik', sans-serif;
 /**************** 공통사항 ******************/
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap');
 
-html, body {font-size: 16px; height: 10000px;}
+html, body {font-size: 16px; height: 10000px; font-family: 'Rubik', sans-serif;}
 .wrapper {width: 1100px; margin: 0 auto;}
 
 .badge-wrap {position: relative;}
@@ -182,6 +182,17 @@ html, body {font-size: 16px; height: 10000px;}
 .mo-navi-wrap .bt-down.active .slash-rt {transform: translateX(-6px);}
 .mo-navi-wrap .mo-caret {position: absolute; color: #171717; font-size: 1.5em; left: 20px; top: -15px;}
 .mo-navi-wrap .mo-sub-sub .mo-caret {color: #343434; top: -13px; left: 34px;}
+
+
+/**************** .banner-wrapper ******************/
+.banner-wrapper {background-color: #eee; height: 522px; position: relative;}
+.banner-wrapper > .slide-stage {}
+.banner-wrapper > .wrapper {position: absolute; height: 100%; top: 0; left: 50%; transform: translateX(-50%); display: flex; }
+.banner-wrapper > .wrapper > .cate-wrap {flex: 30% 0 0; height: 100%; display: flex; flex-direction: column; justify-content: space-between;}
+
+.banner-wrapper > .wrapper > .cate-wrap > .cate {flex-grow: 1; display: flex; align-items: center; justify-content: space-between; padding: 0 1.75em; font-size: 0.75em; background-color: #339059; color: #fff; font-weight: 500; cursor: pointer;}
+.banner-wrapper > .wrapper > .cate-wrap > .cate:hover {background-color: #fbbc34;}
+
 
 
 /**************** 반응형 ******************/

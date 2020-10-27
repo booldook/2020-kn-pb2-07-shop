@@ -306,11 +306,25 @@ function onMobileWrapScroll(e) {
 }
 
 
+function onCateLoad(r) {
+	var html = '';
+	for(var i in r.cates) {
+		html  = '<div class="cate">'+r.cates[i].title;
+		if(r.cates[i].arrow) html += '<i class="fa fa-angle-right"></i>';
+		html += '</div>';
+		$(".cate-wrap").append(html);
+	}
+}
+
+
 /** 이벤트 등록 **********************/
 
 
 // Main Navi 생성
 $.get('../json/navi.json', onNaviLoad);
+
+// Category 생성
+$.get('../json/cate.json', onCateLoad);
 
 // 스크롤 이벤트
 $(window).on("scroll", onScroll);
