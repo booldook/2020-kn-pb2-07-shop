@@ -1,0 +1,17 @@
+{
+	"cates": [
+		{"id": 1, "title": "WOMEN'S CLOTHING", "link": "#", "arrow": true, "subs": []},
+		{"id": 2, "title": "MEN'S CLOTHING", "link": "#", "arrow": true, "subs": []},
+		{"id": 3, "title": "WATCHES MAN", "link": "#", "arrow": false, "subs": []},
+		{"id": 4, "title": "BAGS & SHOES", "link": "#", "arrow": true, "subs": []},
+		{"id": 5, "title": "JEWELRY", "link": "#", "arrow": false, "subs": []},
+		{"id": 6, "title": "ACCESSORIES", "link": "#", "arrow": false, "subs": []},
+		{"id": 7, "title": "BAGS", "link": "#", "arrow": false, "subs": []},
+		{"id": 8, "title": "TOYS, KIDS & BABY", "link": "#", "arrow": false, "subs": []},
+		{"id": 9, "title": "SPORTS & OUTDOORS", "link": "#", "arrow": false, "subs": []},
+		{"id": 10, "title": "HEALTH & BEAUTY", "link": "#", "arrow": false, "subs": []},
+		{"id": 11, "title": "FURNITURE", "link": "#", "arrow": false, "subs": []}
+	]
+}
+
+
