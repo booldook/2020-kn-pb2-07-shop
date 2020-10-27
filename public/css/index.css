@@ -204,9 +204,10 @@ html, body {font-size: 16px; height: 10000px; font-family: 'Rubik', sans-serif;}
 .banner-wrapper .slide-wrap {width: 300%; height: 100%; display: flex; position: relative;}
 .banner-wrapper .slide {flex: 33.3333% 0 0; height: 100%; background-position: center top; background-size: cover; background-repeat: no-repeat; display: flex; flex-direction: column; justify-content: center; align-items: center;}
 .banner-wrapper .slide .slogan {font-family: 'Lora', serif; font-style: italic; color: #339059; font-size: 1.5em;}
-.banner-wrapper .slide .title {}
-.banner-wrapper .slide .price {}
-.banner-wrapper .slide .bt-banner {}
+.banner-wrapper .slide .title {font-size: 3em; color: #333; padding: 0.5em;}
+.banner-wrapper .slide .price {font-size: 8em; color: #ddd; padding: 0.125em;}
+.banner-wrapper .slide .bt-banner {border: 1px solid #222; font-size: 0.875em; padding: 0.75em 1.5em; color: #444; transition: all 0.5s; background-color: #f8f8f8; outline: none;}
+.banner-wrapper .slide .bt-banner:hover {background-color: #222; color: #f8f8f8;}
 .banner-wrapper .slide:first-child {background-image: url(../img/slider-1.jpg);}
 
 /**************** 반응형 ******************/
