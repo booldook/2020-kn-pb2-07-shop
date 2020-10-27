@@ -316,6 +316,19 @@ function onCateLoad(r) {
 	}
 }
 
+function onBannerLoad(r) {
+	var html = '';
+	for(var i in r.banners) {
+		html  = '<div class="slide" style="background-image: url('+r.banners[i].src+')">';
+		html += '	<h3 class="slogan">'+r.banners[i].slogan+'</h3>';
+		html += '	<h2 class="title">'+r.banners[i].title+'</h2>';
+		html += '	<h4 class="price">$<span>'+r.banners[i].price+'</span></h4>';
+		html += '	<button class="bt-banner">SHOP OTHER</button>';
+		html += '</div>';
+		$(".banner-wrapper .slide-wrap").append(html);
+	}
+}
+
 
 /** 이벤트 등록 **********************/
 
@@ -325,6 +338,9 @@ $.get('../json/navi.json', onNaviLoad);
 
 // Category 생성
 $.get('../json/cate.json', onCateLoad);
+
+// Banner 생성
+$.get('../json/banner.json', onBannerLoad);
 
 // 스크롤 이벤트
 $(window).on("scroll", onScroll);
