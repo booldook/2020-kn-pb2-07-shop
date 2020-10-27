@@ -200,7 +200,7 @@ html, body {font-size: 16px; height: 10000px; font-family: 'Rubik', sans-serif;}
 .banner-wrapper .bt-next {right: 12px;}
 .banner-wrapper .slide-stage:hover .bt {opacity: 1;}
 
-.banner-wrapper .slide-stage {position: relative; height: 100%; /* overflow: hidden; */ z-index: 10;}
+.banner-wrapper .slide-stage {position: relative; height: 100%; overflow: hidden; z-index: 10;}
 .banner-wrapper .slide-wrap {width: 300%; height: 100%; display: flex; position: relative;}
 .banner-wrapper .slide {flex: 33.3333% 0 0; height: 100%; background-position: center top; background-size: cover; background-repeat: no-repeat; display: flex; flex-direction: column; justify-content: center; align-items: center;}
 .banner-wrapper .slide .slogan {font-family: 'Lora', serif; font-style: italic; color: #339059; font-size: 1.5em;}

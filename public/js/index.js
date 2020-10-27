@@ -316,6 +316,10 @@ function onCateLoad(r) {
 	}
 }
 
+var bannerNow = 0;
+var bannerLast = 0;
+var banners = [];
+var bannerWidth = 0;
 function onBannerLoad(r) {
 	var html = '';
 	for(var i in r.banners) {
@@ -325,8 +329,74 @@ function onBannerLoad(r) {
 		html += '	<h4 class="price">$<span>'+r.banners[i].price+'</span></h4>';
 		html += '	<button class="bt-banner">SHOP OTHER</button>';
 		html += '</div>';
-		$(".banner-wrapper .slide-wrap").append(html);
+		banners.push($(html).appendTo(".banner-wrapper .slide-wrap"));
 	}
+	bannerLast = $(".banner-wrapper .slide").length - 1;
+	$(".banner-wrapper .slide-wrap").swipe({
+		// swipe: onBannerSwipe,
+		triggerOnTouchEnd: true,
+		swipeStatus: swipeStatus,
+	});
+}
+
+
+function onBannerSwipe(e, dir, dist, duration, fingerCnt, fingerData) {
+	if(dir == 'left') {	//next
+		if(bannerNow < bannerLast) {
+			bannerNow++;
+			bannerAni();
+		}
+	}
+	if(dir == 'right') {	//prev
+		if(bannerNow > 0) {
+			bannerNow--;
+			bannerAni();
+		}
+	}
+}
+
+function bannerAni() {
+	$(".banner-wrapper .slide-wrap").stop().animate({"left": -bannerNow*100+"%"}, 500);
+}
+
+
+function swipeStatus(event, phase, direction, distance) {
+	if (phase == "move" && (direction == "left" || direction == "right")) {
+			var duration = 0;
+			bannerWidth = $(".banner-wrapper .slide").eq(0).outerWidth();
+			console.log(bannerWidth);
+			if (direction == "left") {
+					scrollImages((bannerWidth * bannerNow) + distance, duration);
+			} else if (direction == "right") {
+					scrollImages((bannerWidth * bannerNow) - distance, duration);
+			}
+	} else if (phase == "cancel") {
+			scrollImages(bannerWidth * bannerNow, 500);
+	} else if (phase == "end") {
+			if (direction == "right") {
+					previousImage();
+			} else if (direction == "left") {
+					nextImage();
+			}
+	}
+}
+
+function previousImage() {
+	bannerNow = Math.max(bannerNow - 1, 0);
+	scrollImages(bannerWidth * bannerNow, 500);
+}
+
+function nextImage() {
+	bannerNow = Math.min(bannerNow + 1, bannerLast);
+	scrollImages(bannerWidth * bannerNow, 500);
+}
+
+function scrollImages(distance, duration) {
+	$(".banner-wrapper .slide").css("transition-duration", (duration / 1000).toFixed(1) + "s");
+
+	//inverse the number we set in the css
+	var value = (distance < 0 ? "" : "-") + Math.abs(distance).toString();
+	$(".banner-wrapper .slide").css("transform", "translate(" + value + "px,0)");
 }
 
 
