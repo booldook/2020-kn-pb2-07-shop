@@ -6,11 +6,13 @@ wrapper 1144px
 
 font-family: 'Rubik', sans-serif;
 font-family: 'Lora', serif;
+font-family: 'Aref Ruqaa', serif;
 */
 
 /**************** 공통사항 ******************/
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa&display=swap');
 
 html, body {font-size: 16px; height: 10000px; font-family: 'Rubik', sans-serif;}
 .wrapper {width: 1100px; margin: 0 auto;}
@@ -211,9 +213,18 @@ html, body {font-size: 16px; height: 10000px; font-family: 'Rubik', sans-serif;}
 .banner-wrapper .slide.active {width: 100%; position: absolute; top: 0; left: 0; opacity: 0; transition: none !important; transform: none !important;}
 
 /**************** .middle-wrapper ******************/
-.middle-wrapper {display: flex;}
-.middle-wrapper .middle {flex: 25% 0 0;}
-.middle-wrapper .middle:nth-child(2) {flex: 46% 0 0; margin: 0 2%;}
+.middle-wrapper {display: flex; margin: 3em auto; justify-content: space-between;}
+.middle-wrapper .middle {flex: 23% 0 0; overflow: hidden; cursor: pointer; position: relative;}
+.middle-wrapper .middle:nth-child(2) {flex: 48.2% 0 0;}
+.middle-wrapper .middle img {transition: all 0.75s;}
+.middle-wrapper .middle:hover img {transform: scale(1.2);}
+
+.middle-wrapper .middle .title-wrap {position: absolute; bottom: 1em; left: 1em; background-color: rgba(0,0,0,0.6); color: #f8f8f8; padding: 1em 2em;}
+.middle-wrapper .middle .title-wrap .title {font-family: 'Aref Ruqaa', serif; font-size: 1.5em; border-bottom: 1px solid #f8f8f8; line-height: 1.5em; white-space: nowrap;}
+.middle-wrapper .middle .title-wrap .slogan {font-size: 0.75em; font-weight: 300; text-align: center; margin: 0.75em 0;}
+
+.middle-wrapper .middle:first-child .title-wrap {left: 50%; transform: translateX(-50%);}
+
 
 
 
