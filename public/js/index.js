@@ -387,14 +387,11 @@ function onBannerNext() {
 }
 
 function bannerAni() {
-	var $s = $($banners[bannerNow].clone()).appendTo(".banner-wrapper .slide-stage");
-	$s.addClass("active");
-	$s.css("opacity");
-	$s.css("opacity", 1);
-	setTimeout(function() {
+	var $s = $($banners[bannerNow].clone()).appendTo(".banner-wrapper .slide-stage").addClass("active");
+	$s.stop().animate({"opacity": 1}, 500, function(){
 		scrollImages(getBannerWidth() * bannerNow, 0);
-		$s.remove();
-	}, 500);
+		$(this).remove();
+	});
 }
 
 

@@ -200,15 +200,15 @@ html, body {font-size: 16px; height: 10000px; font-family: 'Rubik', sans-serif;}
 .banner-wrapper .bt-next {right: 12px;}
 .banner-wrapper .slide-stage:hover .bt {opacity: 1;}
 
-.banner-wrapper .slide-stage {position: relative; height: 100%; overflow: hidden; z-index: 10;}
+.banner-wrapper .slide-stage {position: relative; height: 100%; /* overflow: hidden; */ z-index: 10;}
 .banner-wrapper .slide-wrap {width: 300%; height: 100%; display: flex; position: relative;}
-.banner-wrapper .slide {flex: 33.3333% 0 0; height: 100%; background-position: center top; background-size: cover; background-repeat: no-repeat; display: flex; flex-direction: column; justify-content: center; align-items: center;}
+.banner-wrapper .slide {flex: 33.3333% 0 0; height: 100%; background-position: center top; background-size: cover; background-repeat: no-repeat; display: flex; flex-direction: column; justify-content: center; align-items: center; user-select: none; cursor: grab;}
 .banner-wrapper .slide .slogan {font-family: 'Lora', serif; font-style: italic; color: #339059; font-size: 1.5em;}
 .banner-wrapper .slide .title {font-size: 3em; color: #333; padding: 0.5em;}
 .banner-wrapper .slide .price {font-size: 8em; color: #ddd; padding: 0.125em;}
 .banner-wrapper .slide .bt-banner {border: 1px solid #222; font-size: 0.875em; padding: 0.75em 1.5em; color: #444; transition: all 0.5s; background-color: #f8f8f8; outline: none;}
 .banner-wrapper .slide .bt-banner:hover {background-color: #222; color: #f8f8f8;}
-.banner-wrapper .slide.active {width: 100%; position: absolute; top: 0; left: 0; opacity: 0; transition: all 0.5s;}
+.banner-wrapper .slide.active {width: 100%; position: absolute; top: 0; left: 0; opacity: 0; transition: none !important; transform: none !important;}
 
 /**************** 반응형 ******************/
 /**************** 반응형 ******************/
@@ -227,8 +227,8 @@ html, body {font-size: 16px; height: 10000px; font-family: 'Rubik', sans-serif;}
 	.title-wrapper .cart-wrap .cart .badge {display: block;}
 	.title-wrapper .cart-wrap .cart .cart-cnt {display: none;}
 	.title-wrapper .cart-wrap span {display: none;}
-
 	.search-wrapper {display: none !important;}
+	.banner-wrapper > .wrapper {display: none;}
 }
 @media screen and (max-width: 767px) {
 	.wrapper {width: 500px;}
