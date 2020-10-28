@@ -208,6 +208,7 @@ html, body {font-size: 16px; height: 10000px; font-family: 'Rubik', sans-serif;}
 .banner-wrapper .slide .price {font-size: 8em; color: #ddd; padding: 0.125em;}
 .banner-wrapper .slide .bt-banner {border: 1px solid #222; font-size: 0.875em; padding: 0.75em 1.5em; color: #444; transition: all 0.5s; background-color: #f8f8f8; outline: none;}
 .banner-wrapper .slide .bt-banner:hover {background-color: #222; color: #f8f8f8;}
+.banner-wrapper .slide.active {width: 100%; position: absolute; top: 0; left: 0; opacity: 0; transition: all 0.5s;}
 
 /**************** 반응형 ******************/
 /**************** 반응형 ******************/
