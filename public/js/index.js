@@ -181,7 +181,7 @@ function onNaviLoad(r) {
 		html += '</div>'; // .sub-wrap
 		html += '</div>'; // .navi
 		// console.log(html);
-		$(".navi-wrap").append(html);
+		$(".header-wrapper .navi-wrap").append(html);
 		var slideWid = $(".header-wrapper .sub-slide .slide").length * 100 + "%";
 		$(".header-wrapper .sub-slide .wrap").css("width", slideWid);
 	}
@@ -220,8 +220,8 @@ function onNaviLoad(r) {
 		html += '</li>';
 		$(".mo-navi-wrap").append(html);
 	}
-	$(".navi-wrap > .navi").mouseenter(onEnter);
-	$(".navi-wrap > .navi").mouseleave(onLeave);
+	$(".header-wrapper .navi-wrap > .navi").mouseenter(onEnter);
+	$(".header-wrapper .navi-wrap > .navi").mouseleave(onLeave);
 	$(".header-wrapper .sub-slide .color").find("span").click(onColorClick);
 	$(".header-wrapper .sub-slide .wrap").swipe({
 		swipe: function (event, direction, distance, duration, fingerCount, fingerData) {

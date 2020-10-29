@@ -248,12 +248,16 @@ html, body {font-size: 16px; height: 10000px; font-family: 'Rubik', sans-serif;}
 .gift-wrapper .sns-wrap {display: flex;}
 .gift-wrapper .sns-wrap > li {padding: 0 12px;}
 
+/**************** cate-wrapper ******************/
+.cate-wrapper .navi-wrap {display: flex; align-items: center; justify-content: center;}
+.cate-wrapper .navi {padding: 1em 2em; position: relative; user-select: none; cursor: pointer;}
+.cate-wrapper .navi:not(:last-child)::after {display: block; content: "/"; color: #999; position: absolute; right: 0; top: 1em;}
 
-
-
-/**************** 반응형 ******************/
-
-
+.cate-wrapper .navi.active {color: #277045; cursor: auto;}
+.cate-wrapper .navi > div {line-height: 1;}
+.cate-wrapper .navi > div::after {content: ""; display: block; border-bottom: 1px solid #111; transform: scaleX(0); transform-origin: right; transition: transform 0.5s;}
+.cate-wrapper .navi.active > div::after {border-color: #277045; transform: scaleX(1);}
+.cate-wrapper .navi:not(.active):hover > div:after {transform: scaleX(1); transform-origin: left;}
 
 /**************** 반응형 ******************/
 @media screen and (max-width: 1199px) {
