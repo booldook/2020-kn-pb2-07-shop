@@ -315,7 +315,7 @@ function onCateLoad(r) {
 		html  = '<div class="cate">'+r.cates[i].title;
 		if(r.cates[i].arrow) html += '<i class="fa fa-angle-right"></i>';
 		html += '</div>';
-		$(".cate-wrap").append(html);
+		$(".banner-wrapper .cate-wrap").append(html);
 	}
 }
 
