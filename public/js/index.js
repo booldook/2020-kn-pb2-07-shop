@@ -399,7 +399,7 @@ function bannerAni() {
 function onProductLoad(r) {
 	var html = '';
 	for(var i in r.prds) {
-		html  = '<div class="slide">';
+		html  = '<div class="slide swiper-slide">';
 		html += '	<div class="img-wrap">';
 		html += '		<div class="img-case active">';
 		for(var j in r.prds[i].src) {
@@ -423,8 +423,23 @@ function onProductLoad(r) {
 		html += '		<div class="cart"><i class="fa fa-shopping-cart"></i> Add to cart</div>';
 		html += '	</div>';
 		html += '</div>';
-		$(".sub-slide.type2 .wrap").append(html);
+		$(".sub-slide.type2 .swiper-wrapper").append(html);
 	}
+	var swiper = new Swiper('.sub-slide.type2 .swiper-container', {
+		slidesPerView: 4,
+		spaceBetween: 0,
+		slidesPerGroup: 4,
+		loop: true,
+		loopFillGroupWithBlank: false,
+		/* pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+		}, */
+		navigation: {
+			nextEl: '.bt-next',
+			prevEl: '.bt-prev',
+		},
+	});
 }
 
 
