@@ -452,6 +452,28 @@ function onProductLoad(r) {
 }
 
 
+function onPrdCateLoad(r) {
+	var html = '';
+	for(var i in r.cates) {
+		html  = '<div class="cate '+r.cates[i].class+'">';
+		html += '	<div class="cont">';
+		html += '		<div class="designer">DESIGNERS: <span>'+r.cates[i].designer+'</span></div>';
+		html += '		<h2 class="title">'+r.cates[i].title+'</h2>';
+		html += '		<div class="price">$<span>'+r.cates[i].price+'</span></div>';
+		html += '		<div class="content">'+r.cates[i].content+'</div>';
+		html += '		<button class="bt-read">READ MORE</button>';
+		html += '	</div>';
+		for(var j in r.cates[i].src) {
+			html += '<div class="image">';
+			html += '	<img src="'+r.cates[i].src[j]+'" alt="상품" class="w-100">';
+			html += '</div>';
+		}
+		html += '</div>';
+		$(".cate-wrapper .cate-wrap").append(html);
+	}
+}
+
+
 /** 이벤트 등록 **********************/
 
 
@@ -466,6 +488,9 @@ $.get('../json/banner.json', onBannerLoad);
 
 // prd slide 생성
 $.get('../json/product.json', onProductLoad);
+
+// cate-wrapper 생성
+$.get('../json/prd-cate.json', onPrdCateLoad);
 
 // 스크롤 이벤트
 $(window).on("scroll", onScroll);

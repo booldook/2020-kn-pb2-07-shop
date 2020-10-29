@@ -259,6 +259,33 @@ html, body {font-size: 16px; height: 10000px; font-family: 'Rubik', sans-serif;}
 .cate-wrapper .navi.active > div::after {border-color: #277045; transform: scaleX(1);}
 .cate-wrapper .navi:not(.active):hover > div:after {transform: scaleX(1); transform-origin: left;}
 
+.cate-wrapper .cate-wrap {position: relative; border: 1px solid red;}
+.cate-wrapper .cate {width: 100%; display: flex;}
+.cate-wrapper .cate > div {flex: 33.3333%;}
+.cate-wrapper .cate.LT > div {text-align: left;}
+.cate-wrapper .cate.CT > div {text-align: center;}
+.cate-wrapper .cate.RT > div {text-align: right;}
+.cate-wrapper .cate.LT > :nth-child(1) {order: 1;}
+.cate-wrapper .cate.LT > :nth-child(2) {order: 2;}
+.cate-wrapper .cate.LT > :nth-child(3) {order: 3;}
+.cate-wrapper .cate.CT > :nth-child(1) {order: 2;}
+.cate-wrapper .cate.CT > :nth-child(2) {order: 1;}
+.cate-wrapper .cate.CT > :nth-child(3) {order: 3;}
+.cate-wrapper .cate.RT > :nth-child(1) {order: 3;}
+.cate-wrapper .cate.RT > :nth-child(2) {order: 1;}
+.cate-wrapper .cate.RT > :nth-child(3) {order: 2;}
+
+.cate-wrapper .designer {color: #999; font-size: 0.875em;}
+.cate-wrapper .title {color: #333; font-size: 2.5em; padding: 0.5em 0;}
+.cate-wrapper .price {color: #339059; font-size: 3em;}
+.cate-wrapper .content {color: #666; font-size: 0.875em;}
+.cate-wrapper .bt-read {border: none; background-color: #277045; padding: 0.5em 1em; color: #f8f8f8; font-size: 0.75em; transition: all 0.5s; margin-top: 1.5em;}
+.cate-wrapper .bt-read:hover {background-color: #4ebe7d;}
+
+
+
+
+
 /**************** 반응형 ******************/
 @media screen and (max-width: 1199px) {
 	.wrapper {width: 900px;}
