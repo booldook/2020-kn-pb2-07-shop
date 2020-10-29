@@ -30,7 +30,10 @@ html, body {font-size: 16px; height: 10000px; font-family: 'Rubik', sans-serif;}
 .icon.yellow {background-color: #f0bd14; top: -4px; right: -24px;}
 .icon.yellow .fas {color: #f0bd14;}
 
-
+.title-bars {text-align: center; font-size: 1rem; margin-top: 5em;}
+.title-bars > .title-sm {color: #999; letter-spacing: 0.35em; font-size: 0.75em; font-weight: normal;}
+.title-bars > .title {font-size: 1.5em; font-weight: 400; padding: 0.75em;}
+.title-bars > .title-green {width: 40px; border: 1px solid #189954; margin: auto;}
 
 
 
