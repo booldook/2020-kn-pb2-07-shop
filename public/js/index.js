@@ -114,7 +114,7 @@ function onNaviLoad(r) {
 			html += '		</div>';
 			html += '	</div>'; // .lt
 			html += '	<div class="rt">';
-			html += '		<div class="sub-slide">';
+			html += '		<div class="sub-slide ">';
 			html += '			<div class="stage">';
 			html += '				<div class="wrap">';
 			r.navs[i].slides.push(r.navs[i].slides[0]);
