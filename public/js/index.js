@@ -1,6 +1,7 @@
 /** 전역변수선언 ************************************/
 var subNow = 0;		// .navi.FULL 에서의 슬라이드변수
 var subLast = 3;	// .navi.FULL 에서의 슬라이드변수
+var catePrds = [];	// .cate-wrapper의 전역변수
 
 
 /** 사용자 지정 함수 ********************************/
@@ -451,7 +452,6 @@ function onProductLoad(r) {
 	});
 }
 
-
 function onPrdCateLoad(r) {
 	var html = '';
 	for(var i in r.cates) {
@@ -469,10 +469,32 @@ function onPrdCateLoad(r) {
 			html += '</div>';
 		}
 		html += '</div>';
-		$(".cate-wrapper .cate-wrap").append(html);
+		catePrds.push($(html));
 	}
+	$(".cate-wrapper .navi").click(onCateNaviClick);
+	$(".cate-wrapper .navi").eq(0).trigger("click");
 }
 
+function onCateNaviClick(e) {
+	$(this).addClass("active");
+	$(this).siblings().removeClass("active");
+	var id = $(this).index();
+	cateAni(id);
+}
+
+function cateAni(id) {
+	$(".cate-wrapper .cate").css({"opacity": 0, "transform": "translateY(100px)"});
+	var slide = $(catePrds[id].clone()).appendTo(".cate-wrapper .cate-wrap").css({
+		"opacity": 0, "transform": "translateY(100px)", "position": "absolute"
+	});
+	slide.css("opacity");
+	slide.css("transform");
+	slide.css({"opacity": 1, "transform": "translateY(0)"});
+	setTimeout(function(){
+		$(".cate-wrapper .cate").remove();
+		$(catePrds[id].clone()).appendTo(".cate-wrapper .cate-wrap");
+	}, 500);
+}
 
 /** 이벤트 등록 **********************/
 
