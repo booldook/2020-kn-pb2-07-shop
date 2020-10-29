@@ -396,6 +396,37 @@ function bannerAni() {
 	});
 }
 
+function onProductLoad(r) {
+	var html = '';
+	for(var i in r.prds) {
+		html  = '<div class="slide">';
+		html += '	<div class="img-wrap">';
+		html += '		<div class="img-case active">';
+		for(var j in r.prds[i].src) {
+			html += '<img src="'+r.prds[i].src[j]+'" class="w-100">';
+		}
+		html += '		</div>';
+		html += '		<div class="bt bt-icon bt-heart">';
+		html += '			<div class="popper"> Login to use Wishlist <i class="fa fa-caret-right"></i> </div> <i class="far fa-heart"></i>';
+		html += '		</div>';
+		html += '		<div class="bt bt-icon bt-sync">';
+		html += '			<div class="popper"> Compare <i class="fa fa-caret-right"></i> </div> <i class="fa fa-sync"></i>';
+		html += '		</div>';
+		html += '		<div class="bt bt-icon bt-search">';
+		html += '			<div class="popper"> Quick View <i class="fa fa-caret-right"></i> </div> <i class="fa fa-search-plus"></i>';
+		html += '		</div>';
+		html += '	</div>';
+		html += '	<div class="title">'+r.prds[i].title+'</div>';
+		html += '	<div class="brand">'+r.prds[i].brand+'</div>';
+		html += '	<div class="price-wrap">';
+		html += '		<div class="price">'+r.prds[i].price+'</div>';
+		html += '		<div class="cart"><i class="fa fa-shopping-cart"></i> Add to cart</div>';
+		html += '	</div>';
+		html += '</div>';
+		$(".sub-slide.type2 .wrap").append(html);
+	}
+}
+
 
 /** 이벤트 등록 **********************/
 
@@ -408,6 +439,9 @@ $.get('../json/cate.json', onCateLoad);
 
 // Banner 생성
 $.get('../json/banner.json', onBannerLoad);
+
+// prd slide 생성
+$.get('../json/product.json', onProductLoad);
 
 // 스크롤 이벤트
 $(window).on("scroll", onScroll);

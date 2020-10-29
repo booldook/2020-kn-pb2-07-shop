@@ -38,7 +38,7 @@ html, body {font-size: 16px; height: 10000px; font-family: 'Rubik', sans-serif;}
 .sub-slide {width: 100%; margin: auto;}
 .sub-slide .stage {position: relative; overflow: hidden;}
 .sub-slide .wrap {position: relative; display: flex;}
-.sub-slide .slide {position: relative; flex: 25% 0 0; text-align: center;}
+.sub-slide .slide {position: relative; flex: 25% 0 0; text-align: center; user-select: none;}
 .sub-slide .img-wrap {position: relative; overflow: hidden; user-select: none; cursor: pointer;}
 .sub-slide .img-case {position: relative; display: none;}
 .sub-slide .img-case.active {display: block;}
@@ -82,9 +82,10 @@ html, body {font-size: 16px; height: 10000px; font-family: 'Rubik', sans-serif;}
 .sub-slide .bt-prev {left: 0;}
 .sub-slide .bt-next {right: 0;}
 
-.sub-slide.type2 .wrap {width: calc(100% - 40px); left: 20px;}
-.sub-slide.type2 .slide {text-align: left;}
-.sub-slide.type2 .price-wrap {height: 24px; overflow: hidden;}
+.sub-slide.type2 .wrap {width: calc(100% - 40px); left: 20px; overflow: hidden;}
+.sub-slide.type2 .slide {text-align: left; flex: 24% 0 0; margin: 0 0.5%;}
+.sub-slide.type2 .price-wrap {margin-top: 6px; height: 30px; line-height: 30px; overflow: hidden;}
+.sub-slide.type2 .price-wrap .price {color: #999;}
 .sub-slide.type2 .price-wrap > div {height: 100%; transition: all 0.5s; transform: translateY(0);}
 .sub-slide.type2 .slide:hover .price-wrap > div {transform: translateY(-100%);}
 
