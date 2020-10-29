@@ -7,12 +7,12 @@ var subLast = 3;	// .navi.FULL 에서의 슬라이드변수
 
 // .navi.FULL 에서의 슬라이드
 function subAni() {
-	$(".sub-slide .wrap").stop().animate({
+	$(".header-wrapper .sub-slide .wrap").stop().animate({
 		"left": -100 * subNow + "%"
 	}, 500, function () {
 		if (subNow == subLast) {
 			subNow = 0;
-			$(".sub-slide .wrap").css("left", 0);
+			$(".header-wrapper .sub-slide .wrap").css("left", 0);
 		}
 	});
 }
@@ -63,7 +63,7 @@ function onColorClick() {
 function onSubPrevClick() {
 	if (subNow == 0) {
 		subNow = subLast - 1;
-		$(".sub-slide .wrap").css("left", -subLast * 100 + "%");
+		$(".header-wrapper .sub-slide .wrap").css("left", -subLast * 100 + "%");
 	} else subNow--;
 	subAni();
 }
@@ -114,7 +114,7 @@ function onNaviLoad(r) {
 			html += '		</div>';
 			html += '	</div>'; // .lt
 			html += '	<div class="rt">';
-			html += '		<div class="sub-slide ">';
+			html += '		<div class="sub-slide type1">';
 			html += '			<div class="stage">';
 			html += '				<div class="wrap">';
 			r.navs[i].slides.push(r.navs[i].slides[0]);
@@ -182,6 +182,8 @@ function onNaviLoad(r) {
 		html += '</div>'; // .navi
 		// console.log(html);
 		$(".navi-wrap").append(html);
+		var slideWid = $(".header-wrapper .sub-slide .slide").length * 100 + "%";
+		$(".header-wrapper .sub-slide .wrap").css("width", slideWid);
 	}
 	// .mo-navi 생성
 	for(var i in r.navs) {
@@ -220,16 +222,16 @@ function onNaviLoad(r) {
 	}
 	$(".navi-wrap > .navi").mouseenter(onEnter);
 	$(".navi-wrap > .navi").mouseleave(onLeave);
-	$(".sub-slide .color").find("span").click(onColorClick);
-	$(".sub-slide .wrap").swipe({
+	$(".header-wrapper .sub-slide .color").find("span").click(onColorClick);
+	$(".header-wrapper .sub-slide .wrap").swipe({
 		swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
-			if (direction == 'left') $(".sub-slide .bt-next").trigger("click");
-			if (direction == 'right') $(".sub-slide .bt-prev").trigger("click");
+			if (direction == 'left') $(".header-wrapper .sub-slide .bt-next").trigger("click");
+			if (direction == 'right') $(".header-wrapper .sub-slide .bt-prev").trigger("click");
 		},
 		threshold: 30
 	});
-	$(".sub-slide .bt-prev").on("click", onSubPrevClick);
-	$(".sub-slide .bt-next").on("click", onSubNextClick);
+	$(".header-wrapper .sub-slide .bt-prev").on("click", onSubPrevClick);
+	$(".header-wrapper .sub-slide .bt-next").on("click", onSubNextClick);
 	$(".navi-mo-icon").on("click", onNaviMoClick); // .navi-mo-icon 클릭 
 	$(".mo-wrapper").on("click", onMoWrapperClick);	// .mo-wrapper 클릭
 	$(".mo-wrap").on("click", onMoWrapClick);	// .mo-wrap 클릭
