@@ -38,7 +38,7 @@ html, body {font-size: 16px; height: 10000px; font-family: 'Rubik', sans-serif;}
 .sub-slide {width: 100%; margin: auto;}
 .sub-slide .stage {position: relative; overflow: hidden;}
 .sub-slide .wrap {position: relative; display: flex;}
-.sub-slide .slide {position: relative; flex: 25% 0 0; text-align: center; user-select: none;}
+.sub-slide .slide {position: relative; text-align: center; user-select: none;}
 .sub-slide .img-wrap {position: relative; overflow: hidden; user-select: none; cursor: pointer;}
 .sub-slide .img-case {position: relative; display: none;}
 .sub-slide .img-case.active {display: block;}
@@ -243,8 +243,10 @@ html, body {font-size: 16px; height: 10000px; font-family: 'Rubik', sans-serif;}
 .middle-wrapper .middle:last-child:hover .title-wrap .readmore {border-bottom: 1px solid #f8f8f8;}
 
 
-
-
+/**************** gift-wrapper ******************/
+.gift-wrapper {background: #339059 url(../img/gift-newslater.png) no-repeat top left; color: #f8f8f8; padding: 36px; margin: 2em auto; display: flex; justify-content: space-between; align-items: center; font-size: 1.25em;}
+.gift-wrapper .sns-wrap {display: flex;}
+.gift-wrapper .sns-wrap > li {padding: 0 12px;}
 
 
 
@@ -276,7 +278,8 @@ html, body {font-size: 16px; height: 10000px; font-family: 'Rubik', sans-serif;}
 	.middle-wrapper .middle:nth-child(2) {flex: 100% 0 0;}
 }
 @media screen and (max-width: 767px) {
-
+	.gift-wrapper {flex-direction: column; align-items: stretch;}
+	.gift-wrapper .sns-wrap {justify-content: flex-end; padding: 1em 0;}
 }
 @media screen and (max-width: 575px) {
 	.wrapper {width: 98%;}
