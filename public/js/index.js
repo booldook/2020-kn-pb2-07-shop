@@ -589,8 +589,8 @@ $(window).on("resize", onResize);
 
 // 이메일 발송
 emailjs.init("user_TROFqVnbPGZyygPAci7nt");
-function mailSend() {
-	$("#contact-form")[0].contact_number.value = Math.random() * 100000 | 0;
-	emailjs.sendForm('service_7aq0lgy', 'template_yyg15vr', $("#contact-form")[0]);
+function mailSend(f) {
+	f.contact_number.value = Math.random() * 100000 | 0;
+	emailjs.sendForm('service_7aq0lgy', 'template_yyg15vr', f);
 	return false;
 }

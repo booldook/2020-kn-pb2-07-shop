@@ -183,14 +183,14 @@
 				<div class="title">Our Newsletter</div>
 				<div class="title-desc">It only takes a second to be the first to find out about our latest news and promotionsâ ¦</div>
 			</div>
-			<form method="post" id="contact-form" onsubmit="return mailSend();">
+			<form method="post" id="contact-form" onsubmit="return mailSend(this);">
 				<input type="hidden" name="contact_number">
 				<div class="email">
 					<i class="fa fa-envelope"></i>
 					<input type="text" name="email" placeholder="Your email address">
 				</div>
 				<textarea class="comment" name="msg" placeholder="Your comment"></textarea>
-				<button class="bt-send">SIGN UP</button>
+				<button type="submit" class="bt-send">SIGN UP</button>
 			</form>
 		</div>
 	</section>
