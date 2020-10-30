@@ -450,6 +450,22 @@ function onProductLoad(r) {
 		this.params.slidesPerGroup = getCount();
 		this.params.slidesPerView = getCount();
 	});
+
+	var swiper2 = new Swiper('.sub-slide.type3 .swiper-container', {
+		slidesPerView: 3,
+		slidesPerGroup: 3,
+		spaceBetween: 0,
+		loop: true,
+		loopFillGroupWithBlank: false,
+		navigation: {
+			nextEl: '.bt-next',
+			prevEl: '.bt-prev',
+		}
+	});
+	swiper2.on("resize", function() {
+		this.params.slidesPerGroup = 3;
+		this.params.slidesPerView = 3;
+	});
 }
 
 function onPrdCateLoad(r) {
