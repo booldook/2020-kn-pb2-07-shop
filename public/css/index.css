@@ -318,8 +318,9 @@ html, body {font-size: 16px; height: 10000px; font-family: 'Rubik', sans-serif;}
 .news-wrapper .email {position: relative; border-bottom: 2px solid #333;}
 .news-wrapper .email > i {position: absolute; top: 12px; color: #999;}
 .news-wrapper .email > input {width: 100%; border: none; padding: 0.5em 1.5em; background-color: transparent;}
+.news-wrapper form {text-align: right; padding-bottom: 2em;}
 .news-wrapper .email > input:focus {outline: none; border: none;}
-.news-wrapper .comment {margin-top: 1em; width: 100%; border: none; border-bottom: 2px solid #333; height: 100px; padding: 1em; background-color: rgba(255,255,255, 0.3);}
+.news-wrapper .comment {margin-top: 1em; width: 100%; border: none; border-bottom: 2px solid #333; height: 100px; padding: 1em 1.5em; background-color: rgba(255,255,255, 0.3);}
 .news-wrapper .comment:focus {outline: none;}
 .news-wrapper .bt-send {background-color: #111; color: #f8f8f8; padding: 0.5em 1.5em; font-size: 0.875em; transition: all 0.5s;}
 .news-wrapper .bt-send:hover {background-color: #444;}
@@ -332,6 +333,7 @@ html, body {font-size: 16px; height: 10000px; font-family: 'Rubik', sans-serif;}
 }
 @media screen and (max-width: 991px) {
 	.wrapper {width: 94%;}
+	.wrapper-sm {width: 94%;}
 	.top-wrapper > .wrapper {justify-content: center;}
 	.top-wrapper .link-wrap {display: none;}
 	.title-wrapper {padding: 0.5em 0;}
@@ -358,7 +360,8 @@ html, body {font-size: 16px; height: 10000px; font-family: 'Rubik', sans-serif;}
 	.gift-wrapper .sns-wrap {justify-content: flex-end; padding: 1em 0;}
 }
 @media screen and (max-width: 575px) {
-	.wrapper {width: 98%;}
+/* 	.wrapper {width: 98%;}
+	.wrapper-sm {width: 98%;} */
 	.title-wrapper {padding: 0.75em 0;}
 	.title-wrapper .navi-mo-wrap {flex: 35% 0 0;}
 	.title-wrapper .logo-wrap {flex: 30% 0 0;}

@@ -15,6 +15,7 @@
 	<script src="../js/imagesloaded.pkgd.min.js"></script>
 	<script src="../js/moment.min.js"></script>
 	<script src="../js/swiper-bundle.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
 </head>
 
 <body>
@@ -182,12 +183,13 @@
 				<div class="title">Our Newsletter</div>
 				<div class="title-desc">It only takes a second to be the first to find out about our latest news and promotionsâ ¦</div>
 			</div>
-			<form action="#" method="post">
+			<form method="post" id="contact-form" onsubmit="return mailSend();">
+				<input type="hidden" name="contact_number">
 				<div class="email">
 					<i class="fa fa-envelope"></i>
-					<input type="text" name="" placeholder="Your email address">
+					<input type="text" name="email" placeholder="Your email address">
 				</div>
-				<textarea class="comment" name="" placeholder="Your comment"></textarea>
+				<textarea class="comment" name="msg" placeholder="Your comment"></textarea>
 				<button class="bt-send">SIGN UP</button>
 			</form>
 		</div>
