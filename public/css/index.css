@@ -14,7 +14,7 @@ font-family: 'Aref Ruqaa', serif;
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa&display=swap');
 
-html, body {font-size: 16px; height: 10000px; font-family: 'Rubik', sans-serif;}
+html, body {font-size: 16px; font-family: 'Rubik', sans-serif;}
 .wrapper {width: 1100px; margin: 0 auto;}
 .wrapper-sm {width: 600px; margin: 0 auto;}
 
@@ -326,6 +326,22 @@ html, body {font-size: 16px; height: 10000px; font-family: 'Rubik', sans-serif;}
 .news-wrapper .bt-send:hover {background-color: #444;}
 
 
+/**************** .footer-wrapper ******************/
+.footer-wrapper {background-color: #000; color: #aaa;}
+.footer-wrapper .sns-wrap {padding: 3em; font-size: 0.875em; text-align: center;}
+.footer-wrapper .sns-wrap i {padding: 1em; transition: all 0.3s;}
+.footer-wrapper .sns-wrap i:hover {color: #f8f8f8;}
+.footer-wrapper .menu-wrap {display: flex; flex-wrap: wrap;}
+.footer-wrapper .menu-wrap > .menus {flex-basis: 16%; flex-grow: 0; flex-shrink: 1;}
+.footer-wrapper .menu-wrap > .menus:last-child {flex-grow: 1;}
+.footer-wrapper .menu {font-size: 0.875em; padding: 0.5em 0; transition: all 0.3s; cursor: pointer;}
+.footer-wrapper .menus:not(:last-child) .menu:not(.title):hover {text-decoration: underline; color: #f8f8f8;}
+.footer-wrapper .menu.title {font-size: 1em; color: #f8f8f8;}
+.footer-wrapper .menu.title::after {display: block; content: ""; width: 30px; height:2px; background-color: #f8f8f8;}
+
+.footer-wrapper .copy-wrap {text-align: center; padding: 1.5em 0; margin-top: 3em; border-top: 1px solid #333;}
+
+
 
 /**************** 반응형 ******************/
 @media screen and (max-width: 1199px) {
@@ -354,10 +370,13 @@ html, body {font-size: 16px; height: 10000px; font-family: 'Rubik', sans-serif;}
 	.cate-wrapper .cate > div {flex: 100% 0 0;}
 
 	.branch-wrapper .branch {flex: 49% 0 0;}
+	.footer-wrapper .menu-wrap > .menus {flex-basis: 25%; margin-bottom: 2em;}
+	.footer-wrapper .menu-wrap > .menus:last-child {flex-basis: 100%;}
 }
 @media screen and (max-width: 767px) {
 	.gift-wrapper {flex-direction: column; align-items: stretch;}
 	.gift-wrapper .sns-wrap {justify-content: flex-end; padding: 1em 0;}
+	.footer-wrapper .menu-wrap > .menus {flex-basis: 50%;}
 }
 @media screen and (max-width: 575px) {
 /* 	.wrapper {width: 98%;}
@@ -367,4 +386,5 @@ html, body {font-size: 16px; height: 10000px; font-family: 'Rubik', sans-serif;}
 	.title-wrapper .logo-wrap {flex: 30% 0 0;}
 	.title-wrapper .cart-wrap {flex: 35% 0 0;}
 	.branch-wrapper .branch {flex: 98% 0 0;}
+	.footer-wrapper .menu-wrap > .menus {flex-basis: 100%;}
 }
