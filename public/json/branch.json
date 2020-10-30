@@ -1,5 +1,8 @@
 {
 	"branchs": [
-		{"id": 1, "title": "", "src": "../img/chair-01-f.jpg"},
+		{"id": 1, "title": "Furniture", "src": "../img/branch-1.jpg"},
+		{"id": 2, "title": "Accessories", "src": "../img/branch-2.jpg"},
+		{"id": 3, "title": "Synthesizers", "src": "../img/branch-3.jpg"},
+		{"id": 4, "title": "Watches", "src": "../img/branch-4.jpg"}
 	]
 }

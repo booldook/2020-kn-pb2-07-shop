@@ -282,9 +282,15 @@ html, body {font-size: 16px; height: 10000px; font-family: 'Rubik', sans-serif;}
 .cate-wrapper .bt-read {border: none; background-color: #277045; padding: 0.5em 1em; color: #f8f8f8; font-size: 0.75em; transition: all 0.5s; margin-top: 1.5em;}
 .cate-wrapper .bt-read:hover {background-color: #4ebe7d;}
 
-
-
-
+/**************** .branch-wrapper ******************/
+.branch-wrapper {background: url(../img/branch-bg.jpg) no-repeat center -10vh; background-size: cover; padding-top: 2em;}
+.branch-wrapper .title-bars .title {color: #444;}
+.branch-wrapper .title-bars .title-sm {color: #4ebe7d;}
+.branch-wrapper .branch-wrap {display: flex; justify-content: space-between; flex-wrap: wrap; align-items: center; margin-top: 2em;}
+.branch-wrapper .branch {flex: 24% 0 0; position: relative; overflow: hidden; cursor: pointer;}
+.branch-wrapper .branch img {transition: all 1.5s;}
+.branch-wrapper .branch:hover img {transform: scale(1.2);}
+.branch-wrapper .branch .bt-link {position: absolute; outline: none; border: none; color: #666; padding: 0.325em 1.25em 0.5em 1.25em; font-size: 1.25em; font-family: 'Aref Ruqaa', serif; font-style: italic; letter-spacing: 2px; background-color: #f8f8f8; bottom: 1em; left: 50%; transform: translateX(-50%); box-shadow: 1px 1px 3px rgba(0,0,0,0.3);}
 
 /**************** 반응형 ******************/
 @media screen and (max-width: 1199px) {
@@ -310,6 +316,8 @@ html, body {font-size: 16px; height: 10000px; font-family: 'Rubik', sans-serif;}
 
 	.cate-wrapper .cate {flex-direction: column;}
 	.cate-wrapper .cate > div {flex: 100% 0 0;}
+
+	.branch-wrapper .branch {flex: 49% 0 0;}
 }
 @media screen and (max-width: 767px) {
 	.gift-wrapper {flex-direction: column; align-items: stretch;}
@@ -321,4 +329,5 @@ html, body {font-size: 16px; height: 10000px; font-family: 'Rubik', sans-serif;}
 	.title-wrapper .navi-mo-wrap {flex: 35% 0 0;}
 	.title-wrapper .logo-wrap {flex: 30% 0 0;}
 	.title-wrapper .cart-wrap {flex: 35% 0 0;}
+	.branch-wrapper .branch {flex: 98% 0 0;}
 }
