@@ -496,8 +496,19 @@ function cateAni(id) {
 	}, 500);
 }
 
-/** 이벤트 등록 **********************/
+function onBranchLoad(r) {
+	var html = '';
+	for(var i in r.branchs) {
+		html  = '<li class="branch">';
+		html += '	<img src="'+r.branchs[i].src+'" alt="'+r.branchs[i].title+'" class="w-100">';
+		html += '	<button class="bt-link">'+r.branchs[i].title+'</button>';
+		html += '</li>';
+		$(".branch-wrapper .branch-wrap").append(html);
+	}
+}
 
+
+/** 이벤트 등록 **********************/
 
 // Main Navi 생성
 $.get('../json/navi.json', onNaviLoad);
@@ -513,6 +524,9 @@ $.get('../json/product.json', onProductLoad);
 
 // cate-wrapper 생성
 $.get('../json/prd-cate.json', onPrdCateLoad);
+
+// branch-wrapper 생성
+$.get('../json/branch.json', onBranchLoad);
 
 // 스크롤 이벤트
 $(window).on("scroll", onScroll);

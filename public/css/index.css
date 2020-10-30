@@ -286,7 +286,7 @@ html, body {font-size: 16px; height: 10000px; font-family: 'Rubik', sans-serif;}
 .branch-wrapper {background: url(../img/branch-bg.jpg) no-repeat center -10vh; background-size: cover; padding-top: 2em;}
 .branch-wrapper .title-bars .title {color: #444;}
 .branch-wrapper .title-bars .title-sm {color: #4ebe7d;}
-.branch-wrapper .branch-wrap {display: flex; justify-content: space-between; flex-wrap: wrap; align-items: center; margin-top: 2em;}
+.branch-wrapper .branch-wrap {display: flex; justify-content: space-between; flex-wrap: wrap; align-items: center; margin-top: 2em; padding: 1.5em; background-color: #fff;}
 .branch-wrapper .branch {flex: 24% 0 0; position: relative; overflow: hidden; cursor: pointer;}
 .branch-wrapper .branch img {transition: all 1.5s;}
 .branch-wrapper .branch:hover img {transform: scale(1.2);}
