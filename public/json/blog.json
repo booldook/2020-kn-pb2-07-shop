@@ -1,0 +1,9 @@
+{
+	"blogs": [
+		{"id": 1, "title": "Venenatis veulum peus", "tag": "Lifestyle", "src": "../img/blog-1.jpg", "date": "5", "month": "Dec", "content": "Sociosqu scele risque aliquet penatibus pretium vesti bulum imperdiet ad metus a tempus congue a venenatis condi mentum parturient dis"},
+		{"id": 2, "title": "Hac fames tempor", "tag": "Lifestyle", "src": "../img/blog-2.jpg", "date": "4", "month": "Dec", "content": "Sociosqu scele risque aliquet penatibus pretium vesti bulum imperdiet ad metus a tempus congue a venenatis condi mentum parturient dis"},
+		{"id": 3, "title": "Dapibus a at gravida", "tag": "Lifestyle", "src": "../img/blog-3.jpg", "date": "4", "month": "Dec", "content": "Sociosqu scele risque aliquet penatibus pretium vesti bulum imperdiet ad metus a tempus congue a venenatis condi mentum parturient dis"},
+		{"id": 4, "title": "Urna ligula inceptos", "tag": "Lifestyle", "src": "../img/blog-4.jpg", "date": "30", "month": "Nov", "content": "Sociosqu scele risque aliquet penatibus pretium vesti bulum imperdiet ad metus a tempus congue a venenatis condi mentum parturient dis"},
+		{"id": 5, "title": "Condintum intelger ridis", "tag": "Lifestyle", "src": "../img/blog-5.jpg", "date": "28", "month": "Nov", "content": "Sociosqu scele risque aliquet penatibus pretium vesti bulum imperdiet ad metus a tempus congue a venenatis condi mentum parturient dis"}
+	]
+}
